@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    justify-content: center;
+    align-items: flex-end;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	user-select: none;
+	background-color: black;
+}
+
+.main_bg{
+	width: 100%;
+	height: 68vh;
+	max-width: 500px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	margin: auto;
+}
+
+.container {
+	width: 100%;
+	max-width: 500px;
+	margin: auto;
+	display: flex;
+	margin-bottom: 0px;
+	margin: auto;
+}
+
+.container_2{
+	width: 100%;
+	margin: auto;
+}
+	
+#world-indicator {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  background: black;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+
+.button-container {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.game-button {
+  width: 160px;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(to bottom, #5c8aff, #2d5bd7);
+  color: #fff;
+  cursor: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.game-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.6);
+}
+
+.footer {
+  height: 3vh;
+  line-height: 3vh;
+  margin-top: 6vh;
+  font-size: 12px;
+  color: #fff;
+  opacity: 0.8;
+  text-align: center;
+}

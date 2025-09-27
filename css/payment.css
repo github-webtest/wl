@@ -1,0 +1,93 @@
+body {
+      margin: 0;
+	  width: 100%;
+	  min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #2c3e50, #3498db);
+	  user-select: none;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+      position: sticky;
+      top: 0;
+	  color: #ffffff;
+    }
+
+    .back-btn {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(to bottom right, #1f3b57, #3498db);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+      cursor: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+	  background-color: rgba(52, 152, 219, 0.5);
+	  background-size: 100% 100%;
+    }
+
+    .back-btn:active {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    .container {
+	  max-width: 500px;
+      padding: 20px;
+	  margin: auto;
+    }
+	
+	.buy_bg{
+		width: 90%;
+		height: 200px;
+		margin: auto;
+		margin-bottom: 6vh;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		border-radius: 1vh;
+	}
+	
+	.buy_bg_in{
+		width: 100%;
+		height: 144px;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		float: left;
+	}
+	
+	.buy_button_bg{
+		width: 100%;
+		height: 48px;
+		margin-top: 8px;
+		display: flex;
+	}
+	
+	.buy_button{
+		width: 80px;
+		height: 40px;
+		margin-top: 4px;
+		margin: auto;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		text-align: center;
+		line-height: 40px;
+		color: black;
+		border-radius: 1vh;
+	}
+	
+	.buy_button:active {
+    transform: scale(1.05);
+    }

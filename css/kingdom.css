@@ -1,0 +1,516 @@
+body {
+    margin: 0;
+    padding: 0;
+	min-width: 100%;
+	min-height: 100vh;
+	font-family: Arial, Helvetica, sans-serif;
+	text-shadow: 0.5px 0.5px 0 #000000;
+	letter-spacing: 0.5px;
+	font-size: 12px;
+	user-select: none;
+	background: linear-gradient(to bottom right, #2c3e50, #3498db);
+	
+}
+
+.container {
+	  max-width: 500px;
+	  margin-left: auto;
+	  margin-right: auto;
+    }
+
+.bg_kingdom{
+	width: 100%;
+	height: 100vh;
+	float: left;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+
+.bg_images{
+	width: 10%;
+	height: 10%;
+	float: left;
+}
+
+.top_menus {
+	width: 100%;
+	max-width: 500px;
+	height: 6.5vh;
+	position: fixed;
+	z-index: 2;
+}
+
+.top_menu{
+	width: 29%;
+	height: 4.75vh;
+	float: left;
+	margin-left: 0.8%;
+	margin-top: 0.8vh;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	color: black;
+	display: flex;
+	white-space: nowrap;
+}
+
+.top_menu span{
+	margin: auto;
+	margin-left: 31%;
+}
+
+.w_c_hover:active {
+      transform: scale(1.03);
+}
+
+.setting_menu{
+	width: 9%;
+	height: 4.75vh;
+	float: left;
+	margin-left: 0.8%;
+	margin-top: 0.8vh;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.top_menus2{
+	width: 100%;
+	max-width: 500px;
+	height: 4.75vh;
+	position: fixed;
+	background-color: rgb(0,0,0,0.5);
+	top: 6.5vh;
+	border-top: 1px solid white;
+	border-top-left-radius: 1vh;
+	border-top-right-radius: 1vh;
+	color: white;
+	white-space: nowrap;
+}
+
+.top_menus2:active{
+	background-color: rgb(0,0,0,0.75);
+}
+
+.r_menu{
+	width: 24%;
+	height: 4vh;
+	float: left;
+	margin-top: 0.375vh;
+	margin-left: 1%;
+	line-height: 4.25vh;
+	font-size: 12px;
+}
+
+.r_menu_s{
+	width: 30%;
+	height: 100%;
+	float: left;
+	border-radius: 20%;
+	margin-right: 4%;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.top_menus3{
+	width: 15%;
+	max-width: 75px;
+	height: 19vh;
+	position: absolute;
+	top: 14vh;
+	color: white;
+	right: 0px;
+}
+
+.t_menu{
+	width: 90%;
+	height: 8.5vh;
+	max-width: 70px;
+	max-height: 70px;
+	margin-left: 9%;
+	float: left;
+	margin-bottom: 1.75vh;
+	text-align: center;
+	font-size: 10px;
+}
+
+.t_menu_img{
+	width: 82%;
+	height: 70%;
+	float: left;
+	margin-left: 8%;
+	margin-top: 0.4vh;
+	border-radius: 1vh;
+	margin-bottom: 0.125vh;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.bottom_menus{
+	width: 100%;
+	max-width: 500px;
+	height: 6vh;
+	position: fixed;
+	bottom: 11vh;
+	background-color: rgba(0,0,0,0.5);
+	border-top-left-radius: 1vh;
+	border-top-right-radius: 1vh;
+	border-top: 1px solid white;
+	display: flex;
+	color: white;
+	white-space: nowrap;
+}
+
+.bottom_menus:active{
+	background-color: rgba(0,0,0,0.75);
+}
+
+.bottom_menus span{
+	margin: auto;
+	margin-left: 2%;
+	float: left
+}
+
+.bottom_menus_img{
+	width: 5vh;
+	height: 5vh;
+	margin: auto;
+	margin-top: 83.6vh;
+	border-top-right-radius: 1vh;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	right: 2%;
+}
+
+.bottom_menus2{
+	width: 100%;
+	max-width: 500px;
+	height: 10vh;
+	position: fixed;
+	bottom: 4px;
+	display: flex;
+}
+
+.bottom_menus3 span{
+	color: white;
+	margin: auto;
+}
+
+.bottom_menu{
+	width: 18%;
+	height: 9vh;
+	float: left;
+	margin: auto;
+	display: flex;
+}
+
+.bottom_menu_img{
+	width: 9vh;
+	height: 9vh;
+	max-width: 70px;
+	max-height: 70px;
+	margin-left: auto;
+	margin-right: auto;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.show_info_build_bg{
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	align-items: center;
+	justify-content: center;
+	z-index: 999;
+	background-color: rgba(0,0,0,0.5);
+	top: 0px;
+	display: flex;
+	font-size: 14px;
+}
+
+.show_info_build{
+	width: 92%;
+	max-width: 400px;
+	background-color: #f5f5f5;
+	border-radius: 1vh;
+}
+
+.show_info_header{
+	width: 100%;
+	border-top-left-radius: 1vh;
+	border-top-right-radius: 1vh;
+	padding-top: 0.5vh;
+	padding-bottom: 0.5vh;
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f5f5f5;
+	margin: auto;
+	border-bottom: 1px solid black;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+	font-size: 16px;
+}
+
+.info_left{
+	width: 10%;
+	height: 1px;
+	visibility: hidden;
+}
+
+.info_right{
+	width: 2.25vh;
+	height: 2.25vh;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin-right: 2%;
+}
+
+.info_right:active{
+	transform: translateY(0.2vh);
+    box-shadow: none;
+}
+
+.show_iner{
+	width: 96%;
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-bottom: 2vh;
+}
+
+.show_main1{
+	width: 100%;
+	max-height: 60vh;
+	overflow: scroll;
+	background-color: rgba(0,0,0,0.1);
+	border-radius: 1vh;
+	border: 1px solid gray;
+	box-sizing: border-box;
+}
+
+.head_set{
+	width: 100%;
+	text-align: center;
+	margin-bottom: 2vh;
+	margin-top: 2vh;
+}
+
+.lordname_div{
+	width: 100%;
+	height: 6vh;
+	display: flex;
+}
+
+.lordname_input{
+	width: 35%;
+	height: 5vh;
+	box-sizing: border-box;
+    outline: none;
+    box-shadow: none;
+    border: 1px solid gray;
+    border-radius: 1vh;
+	margin: auto;
+	margin-right: 5%;
+}
+
+.lordname_btn{
+	padding: 4px;
+    border-radius: 1vh;
+	margin: auto;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	text-align: center;
+	margin-left: 0;
+	line-height: 16px;
+	border-radius: 1vh;
+	font-size: 12px;
+}
+
+.lordname_btn:active{
+	transform: scale(1.03);
+}
+
+.set_line{
+	width: 100%;
+	height: 12px;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.set_flag{
+	width: 9vh;
+	height: 6vh;
+	margin: auto;
+	margin-left: 10%;
+	margin-right: 5%;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.set_next_img{
+	width: 5vh;
+	height: 5vh;
+	margin: auto;
+	margin-right: 10%;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.active_set{
+	width: 94%;
+	height: 7vh;
+	display: flex;
+	margin: auto;
+	border-radius: 1vh;
+}
+
+.active_set:active{
+	.set_next_img{
+		transform: translateX(3px);
+	}
+}
+
+.cpassword_v_input{
+	width: 40%;
+	height: 5vh;
+	box-sizing: border-box;
+    outline: none;
+    box-shadow: none;
+    border: 1px solid gray;
+    border-radius: 1vh;
+	margin: auto;
+	text-align: center;
+}
+
+@keyframes food_red {
+    0%, 50% {
+      color: red;
+    }
+    50.1%, 100% {
+      color: white;
+    }
+}
+
+.castle_div {
+	width: 40%;
+	height: 26.5vh;
+	margin-top: 13vh;
+	margin-left: 1%;
+	border-radius: 2vh;
+	float: left;
+	display: flex;
+}
+
+.barracks_div{
+	width: 29.5%;
+	height: 16.9vh;
+	margin-right: 12.5%;
+	margin-top: 14vh;
+	border-radius: 2vh;
+	float: right;
+	display: flex;
+}
+
+.academy_div{
+	width: 35%;
+	height: 19.1vh;
+	margin-right: 23%;
+	margin-top: 0.5vh;
+	border-radius: 2vh;
+	float: right;
+	display: flex;
+}
+
+.workshop_div{
+	width: 32%;
+	height: 13.3vh;
+	margin-right: 2%;
+	margin-top: 0.25vh;
+	border-radius: 2vh;
+	float: right;
+	display: flex;
+}
+
+.market_div{
+	width: 29%;
+	height: 15.5vh;
+	margin-left: 4%;
+	margin-top: 0.3vh;
+	border-radius: 2vh;
+	float: left;
+	display: flex;
+}
+
+.statue_div{
+	width: 12%;
+	height: 10.75vh;
+	margin-left: 6.1%;
+	margin-top: -2.5vh;
+	border-radius: 2vh;
+	float: left;
+	display: flex;
+}
+
+.wall_div{
+	width: 17.5%;
+	height: 10.75vh;
+	margin-left: -4%;
+	margin-top: 7.25vh;
+	transform: scale(2, 1.3) skewY(-45deg);
+	border-bottom-left-radius: 2vh;
+	border-top-right-radius: 2vh;
+	float: left;
+	display: flex;
+}
+
+.wall_div2{
+	width: 30%;
+	height: 10.75vh;
+	margin-left: -25%;
+	margin-top: 8.25vh;
+	border-radius: 2vh;
+	float: left;
+	display: flex;
+}
+
+.village_div{
+	width: 25.5%;
+	height: 16vh;
+	margin-top: 7vh;
+	border-radius: 2vh;
+	float: right;
+	display: flex;
+}
+
+.lord_name_te{
+	padding-left: 4px;
+	padding-right: 4px;
+	height: 5vh;
+	margin: auto;
+	line-height: 5vh;
+	background-color: rgba(255,255,255,0.5);
+	border-radius: 2vh;
+	text-align: center;
+}
+
+.processing_timer_div{
+	width: 80%;
+	height: 2vh;
+	margin: auto;
+	background-color: black;
+}
+
+.processing_timer_in{
+	height: 2vh;
+	background-color: lime;
+}
+
+.processing_timer_text{
+	width: 100%;
+	color: white;
+	text-align: center;
+}
+
+.processing_timer_center{
+	width: 100%;
+	margin: auto;
+}
