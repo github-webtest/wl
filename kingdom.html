@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Worl Lords</title>
+	<meta name="author" content="XMAF">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<link url="style" rel="stylesheet" href="css/kingdom.css" type="text/css" media="screen">
+	<link url="style" rel="stylesheet" href="css/toast.css" type="text/css" media="screen">
+</head>
+
+<body onload="save()">
+
+<div id="container" class="container">
+
+<div class="top_menus">
+<div class="top_menu w_c_hover" onclick="window.location.href='payment.html';" style="background-image: url('images/diamond_box.png');"><span id="diamond">0</span></div>
+<div id="message_box_bg" class="top_menu w_c_hover" style="margin-left: 1%; background-image: url('images/messages_box.png');" onclick="Go_Url('messages')"><span id="lang_messages">Messages</span></div>
+<div class="top_menu w_c_hover" style="margin-left: 0.8%; background-image: url('images/ongoing_box.png');" onclick="Go_Url('processes')"><span id="lang_processes">Processes</span></div>
+<div class="setting_menu w_c_hover" style="background-image: url('images/settings_box.png');" onclick="showSettings()"></div>
+</div>
+
+<div class="top_menus2" onclick="window.location.href='kingdom_info.html';">
+<div class="r_menu"><div class="r_menu_s" style="background-image: url('images/gold.png');"></div><div id="gold">10.00K</div></div>
+<div class="r_menu"><div class="r_menu_s" style="background-image: url('images/food.png');"></div><div id="food">10.00K</div></div>
+<div class="r_menu"><div class="r_menu_s" style="background-image: url('images/wood.png');"></div><div id="wood">10.00K</div></div>
+<div class="r_menu" style="width: 23%; margin-right: 1%;"><div class="r_menu_s" style="background-image: url('images/age_point.png');"></div><div id="age_points">0</div></div>
+</div>
+
+<div id="top_menus3" class="top_menus3">
+<div class="t_menu" onclick="window.location.href='bonus.html';"><div id="bonus_icon_img" class="t_menu_img w_c_hover" style="background-image: url('images/bonus_box1.png');"></div><div id="lang_bonus">Bonus</div><div id="bonus_time" style="display: none;"></div></div>
+<div class="t_menu" style="margin-bottom: 0;" onclick="window.location.href='tasks.html';"><div class="t_menu_img w_c_hover" style="background-image: url('images/tasks_box.png');"></div><div id="lang_tasks">Tasks</div></div>
+</div>
+
+<div class="bottom_menus" onclick="window.location.href='embessy.html';">
+<span id="bottom_menus_text">Welcome, My Lord.</span>
+</div>
+
+<div class="bottom_menus2">
+<div class="bottom_menu" onclick="window.location.href='military.html';"><div class="bottom_menu_img w_c_hover" style="background-image: url('images/military_box.png');"></div></div>
+<div class="bottom_menu" onclick="Go_Url('logs')"><div class="bottom_menu_img w_c_hover" style="background-image: url('images/log_box.png');"></div></div>
+<div id="map_onclick" class="bottom_menu"><div class="bottom_menu_img w_c_hover" style="background-image: url('images/map_box.png');"></div></div>
+<div class="bottom_menu" onclick="Go_Url('alliance')"><div class="bottom_menu_img w_c_hover" style="background-image: url('images/alliance_box.png');"></div></div>
+<div class="bottom_menu" onclick="window.location.href='ranks.html';"><div class="bottom_menu_img w_c_hover" style="background-image: url('images/rank_gold_box.png');"></div></div>
+</div>
+
+<div id="kingdom_bg" class="bg_kingdom" style="background-image: url('images/kingdom.png');">
+
+<div id="castle_div_click" class="castle_div" onclick="window.location.href='castle.html';"></div>
+<div id="barracks_div_click" class="barracks_div" onclick="window.location.href='barracks.html';"></div>
+<div id="academy_div_click" class="academy_div" onclick="window.location.href='academy.html';"></div>
+<div id="workshop_div_click" class="workshop_div" onclick="window.location.href='workshop.html';"></div>
+<div id="market_div_click" class="market_div" onclick="window.location.href='market.html';"></div>
+<div id="statue_div_click" class="statue_div" onclick="window.location.href='statue.html';"></div>
+<div class="wall_div" onclick="window.location.href='wall.html';"></div>
+<div id="wall_div_click" class="wall_div2"></div>
+<div id="village_div_click" class="village_div" onclick="window.location.href='village.html';"></div>
+
+</div>
+
+<div id="bottom_menus_img_id" class="bottom_menus_img w_c_hover" style="background-image: url('images/next_box.png');"></div>
+
+</div>
+
+<div id="build_info_bg" class="show_info_build_bg" style="display: none;">
+  <div class="show_info_build">
+  <div class="show_info_header"><div class="info_left"></div><b id="show_info_title">Settings</b><div class="info_right" style="background-image: url('images/x_icon.png');" onclick="showSettings('Exit')"></div></div>
+  
+  <div class="head_set"><b id="world_lang">World: </b><b id="world">0</b></div>
+  
+  <div id="show_iner1" class="show_iner">
+  <div class="show_main1">
+  <p style="text-align: center; margin-top: 1vh;"><b id="lordname_lang">Lord Name</b></p>
+  <div id="ln_div_id1" class="lordname_div"><input id="lordname_input" type="text" class="lordname_input" pattern="[a-zA-Z0-9_]" maxlength="12"></input><div class="lordname_btn" onclick="Lord_Name_Change()" style="background-image: url('images/button_lime.png'); padding: 6px;"><span id="save_lang"></span></div></div>
+  <div id="ln_div_id2" class="lordname_div" style="display: none;"></div>
+  <p id="l_n_max12" style="text-align: center; margin-top: 4px; font-size: 11px;"><span id="lordname_lang2">Lord Name (max 12 chars)</span></p>
+  <div class="set_line" style="background-image: url('images/line.png');"></div>
+  <p style="text-align: center; margin-top: 1vh;"><b id="language_lang">Language</b></p>
+  <div class="lordname_div" style="height: 7vh;"><div class="active_set" onclick="showSettings('Flags')"><div id="set_flag" class="set_flag" style="background-image: url('images/en_flag.png');"></div><b id="language" style="margin: auto; margin-left: 0;">English</b><div class="set_next_img" style="background-image: url('images/next_button.png');"></div></div></div>
+  <div class="set_line" style="background-image: url('images/line.png');"></div>
+  <p style="text-align: center; margin-top: 1vh;"><b id="account_lang">Account</b></p>
+  <div class="lordname_div" style="height: 54px;"><div class="lordname_btn" style="background-image: url('images/button_blue.png'); margin-left: auto; padding: 10px;" onclick="showSettings('CEmail')"><span id="cemail_lang">Change Email</span></div></div>
+  <div class="lordname_div" style="height: 54px;"><div class="lordname_btn" style="background-image: url('images/button_blue.png'); margin-left: auto; padding: 10px;" onclick="showSettings('CPassword')"><span id="cpassword_lang">Change Password</span></div></div>
+  <div class="lordname_div" style="height: 54px;"><div class="lordname_btn" style="background-image: url('images/button_yellow.png'); margin-left: auto; padding: 10px;" onclick="window.location.href='support.html';"><span id="support_lang">Support</span></div></div>
+  <div class="lordname_div" style="height: 54px;"><div class="lordname_btn" style="background-image: url('images/button_red.png'); margin-left: auto; padding: 10px;" onclick="window.location.href='enter.html';"><span id="exit_lang">Exit</span></div></div>
+  </div>
+  </div>
+  
+  <div id="show_iner2" class="show_iner" style="display: none;">
+  <div class="show_info_header"><div class="info_left"></div><b id="language_lang2">Language</b><div class="info_right" style="background-image: url('images/x_icon.png');" onclick="showSettings('Back')"></div></div>
+  <div class="show_main1" style="border-top-left-radius: 0; border-top-right-radius: 0;">
+  <div class="lordname_div" style="height: 7vh;"><div class="active_set" onclick="showSettings('Lang_EN')"><div class="set_flag" style="background-image: url('images/en_flag.png');"></div><b style="margin: auto; margin-left: 0;">English</b><div class="set_next_img" style="background-image: url('images/next_button.png');"></div></div></div>
+  <div class="lordname_div" style="height: 7vh;"><div class="active_set" onclick="showSettings('Lang_DE')"><div class="set_flag" style="background-image: url('images/de_flag.png');"></div><b style="margin: auto; margin-left: 0;">Deutsch</b><div class="set_next_img" style="background-image: url('images/next_button.png');"></div></div></div>
+  <div class="lordname_div" style="height: 7vh;"><div class="active_set" onclick="showSettings('Lang_FR')"><div class="set_flag" style="background-image: url('images/fr_flag.png');"></div><b style="margin: auto; margin-left: 0;">Français</b><div class="set_next_img" style="background-image: url('images/next_button.png');"></div></div></div>
+  <div class="lordname_div" style="height: 7vh;"><div class="active_set" onclick="showSettings('Lang_ES')"><div class="set_flag" style="background-image: url('images/es_flag.png');"></div><b style="margin: auto; margin-left: 0;">Español</b><div class="set_next_img" style="background-image: url('images/next_button.png');"></div></div></div>
+  <div class="lordname_div" style="height: 7vh;"><div class="active_set" onclick="showSettings('Lang_PT')"><div class="set_flag" style="background-image: url('images/pt_flag.png');"></div><b style="margin: auto; margin-left: 0;">Português</b><div class="set_next_img" style="background-image: url('images/next_button.png');"></div></div></div>
+  <div class="lordname_div" style="height: 7vh;"><div class="active_set" onclick="showSettings('Lang_TR')"><div class="set_flag" style="background-image: url('images/tr_flag.png');"></div><b style="margin: auto; margin-left: 0;">Türkçe</b><div class="set_next_img" style="background-image: url('images/next_button.png');"></div></div></div>
+  <div class="lordname_div" style="height: 7vh;"><div class="active_set" onclick="showSettings('Lang_RU')"><div class="set_flag" style="background-image: url('images/ru_flag.png');"></div><b style="margin: auto; margin-left: 0;">Русский</b><div class="set_next_img" style="background-image: url('images/next_button.png');"></div></div></div>
+  <div class="lordname_div" style="height: 7vh;"><div class="active_set" onclick="showSettings('Lang_ZH')"><div class="set_flag" style="background-image: url('images/zh_flag.png');"></div><b style="margin: auto; margin-left: 0;">中国人</b><div class="set_next_img" style="background-image: url('images/next_button.png');"></div></div></div>
+  </div>
+  </div>
+  
+  <div id="show_iner3" class="show_iner" style="display: none;">
+  <div class="show_info_header"><div class="info_left"></div><b id="cemail_lang2">Change Email</b><div class="info_right" style="background-image: url('images/x_icon.png');" onclick="showSettings('Back')"></div></div>
+  <div class="show_main1" style="border-top-left-radius: 0; border-top-right-radius: 0;">
+  <p style="text-align: center; margin-top: 1vh;"><b id="esend_lang"></b></p>
+  <div class="lordname_div"><input id="cemail_code_input" type="text" class="cpassword_v_input" style="margin-right: 5px;" pattern="[0-9]" maxlength="6"></input><div class="lordname_btn" style="background-image: url('images/button_blue.png'); margin-left: 5px; padding: 6px;" onclick="Resend_Code_Email_1()"><span id="resend_lang1">Resend</span></div></div>
+  <div class="lordname_div" style="height: 54px;"><div class="lordname_btn" style="background-image: url('images/button_yellow.png'); margin-left: auto; padding: 10px;" onclick="Send_Code_Email_1()"><span id="send_lang">Send</span></div></div>
+  </div>
+  </div>
+  
+  <div id="show_iner4" class="show_iner" style="display: none;">
+  <div class="show_info_header"><div class="info_left"></div><b id="cpassword_lang2">Change Password</b><div class="info_right" style="background-image: url('images/x_icon.png');" onclick="showSettings('Back')"></div></div>
+  <div class="show_main1" style="border-top-left-radius: 0; border-top-right-radius: 0;">
+  <p style="text-align: center; margin-top: 1vh;"><b id="esend_lang2"></b></p>
+  <div class="lordname_div"><input id="cpassword_code_input" type="text" class="cpassword_v_input" style="margin-right: 5px;" pattern="[0-9]" maxlength="6"></input><div class="lordname_btn" style="background-image: url('images/button_blue.png'); margin-left: 5px; padding: 6px;" onclick="Resend_Code_Password()"><span id="resend_lang2">Resend</span></div></div>
+  <div class="lordname_div" style="height: 54px;"><div class="lordname_btn" style="background-image: url('images/button_yellow.png'); margin-left: auto; padding: 10px;" onclick="Send_Code_Password()"><span id="send_lang2">Send</span></div></div>
+  </div>
+  </div>
+  
+  <div id="show_iner5" class="show_iner" style="display: none;">
+  <div class="show_info_header"><div class="info_left"></div><b id="cemail_lang3">Change Email</b><div class="info_right" style="background-image: url('images/x_icon.png');" onclick="showSettings('Back')"></div></div>
+  <div class="show_main1" style="border-top-left-radius: 0; border-top-right-radius: 0;">
+  <p style="text-align: center; margin-top: 1vh;"><b id="esend_lang3"></b></p>
+  <div class="lordname_div"><input id="newemail_input" type="email" class="cpassword_v_input"></input></div>
+  <div class="lordname_div" style="height: 54px;"><div class="lordname_btn" style="background-image: url('images/button_yellow.png'); margin-left: auto; padding: 10px;" onclick="Send_Email()"><span id="send_lang3">Send</span></div></div>
+  </div>
+  </div>
+  
+  <div id="show_iner6" class="show_iner" style="display: none;">
+  <div class="show_info_header"><div class="info_left"></div><b id="cemail_lang4">Change Email</b><div class="info_right" style="background-image: url('images/x_icon.png');" onclick="showSettings('Back')"></div></div>
+  <div class="show_main1" style="border-top-left-radius: 0; border-top-right-radius: 0;">
+  <p style="text-align: center; margin-top: 1vh;"><b id="esend_lang4"></b></p>
+  <div class="lordname_div"><input id="newemail_code_input" type="number" class="cpassword_v_input" style="margin-right: 5px;" pattern="[0-9]" maxlength="6"></input><div class="lordname_btn" style="background-image: url('images/button_blue.png'); margin-left: 5px; padding: 6px;" onclick="Resend_Code_Email_2()"><span id="resend_lang3">Resend</span></div></div>
+  <div class="lordname_div" style="height: 54px;"><div class="lordname_btn" style="background-image: url('images/button_yellow.png'); margin-left: auto; padding: 10px;" onclick="Send_Code_Email_2()"><span id="send_lang4">Send</span></div></div>
+  </div>
+  </div>
+  
+  <div id="show_iner7" class="show_iner" style="display: none;">
+  <div class="show_info_header"><div class="info_left"></div><b id="cpassword_lang3">Change Password</b><div class="info_right" style="background-image: url('images/x_icon.png');" onclick="showSettings('Back')"></div></div>
+  <div class="show_main1" style="border-top-left-radius: 0; border-top-right-radius: 0;">
+  <p style="text-align: center; margin-top: 1vh;"><b id="esend_lang5"></b></p>
+  <div class="lordname_div"><input id="newpassword_input" type="text" class="cpassword_v_input" maxlength="12"></input></div>
+  <div class="lordname_div" style="height: 54px;"><div class="lordname_btn" style="background-image: url('images/button_yellow.png'); margin-left: auto; padding: 10px;" onclick="Send_New_Password()"><span id="send_lang5">Send</span></div></div>
+  </div>
+  </div>
+  
+  
+  </div>
+  </div>
+
+<div id="toast-container"></div>
+<script type="text/javascript" src="js/toast.js"></script>
+<script type="text/javascript" src="js/timer.js"></script>
+<script type="text/javascript" src="js/kingdom.js"></script>
+
+</body>
+
+</html>

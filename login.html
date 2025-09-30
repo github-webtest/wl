@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Worl Lords</title>
+	<meta name="author" content="XMAF">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<link url="style" rel="stylesheet" href="css/login_register.css" type="text/css" media="screen">
+	<link url="style" rel="stylesheet" href="css/toast.css" type="text/css" media="screen">
+</head>
+
+<body>
+<div id="header_div" class="header">
+    <div class="back-btn" style="visibility: hidden;"></div>
+	<div class="header-title">World Lords</div>
+	<div class="back-btn" style="visibility: hidden;"></div>
+  </div>
+  
+  <div id="container" class="container">
+
+  <div class="login-container">
+    <h2 id="login_lang">Login</h2>
+    <form id="loginForm">
+      <div class="form-group">
+        <label id="email_lang" for="email">Email</label>
+        <input type="text" id="email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label id="password_lang" for="password">Password</label>
+        <input type="password" id="password" name="password" maxlength="12" required />
+		<a id="r_password_lang" href="recover.html">Recover password</a>
+      </div>
+      <button id="enter_lang" type="submit" class="login-button">Enter</button>
+      <div class="alt-link">
+        <span id="enter2_lang">Don't have an account?</span> <a id="register_lang" href="register.html">Register</a>
+      </div>
+    </form>
+  </div>
+  
+  </div>
+
+<div id="toast-container"></div>
+<script type="text/javascript" src="js/toast.js"></script>
+<script type="text/javascript" src="js/timer.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="js/lang.js"></script>
+<script type="text/javascript" src="js/logged.js"></script>
+</body>
+
+</html>

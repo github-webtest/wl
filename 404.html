@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
+    <style>
+        * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      margin: 0;
+	  width: 100%;
+	  min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #2c3e50, #3498db);
+	  user-select: none;
+    }
+
+        .container {
+            max-width: 500px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 6rem;
+            margin: 0;
+            color: #ff4c4c;
+        }
+
+        h2 {
+            margin: 10px 0 20px;
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 30px;
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            background: #007bff;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body onload="save()" style="display: flex;">
+    <div class="container" style="text-align: center; max-height: 400px; margin: auto;">
+        <h1>404</h1>
+        <h2 id="head">Page Not Found</h2>
+        <p id="desc">Sorry, the page you are looking for does not exist.</p>
+        <a id="btn_text" href="register.html" class="btn">Go to Homepage</a>
+    </div>
+	<script type="text/javascript">
+	
+	const lang404 = {
+    en: {
+        title: "Page Not Found",
+        message: "Sorry, the page you are looking for does not exist.",
+        button: "Go to Homepage"
+    },
+    de: {
+        title: "Seite nicht gefunden",
+        message: "Entschuldigung, die gesuchte Seite existiert nicht.",
+        button: "Zur Startseite"
+    },
+    fr: {
+        title: "Page non trouvée",
+        message: "Désolé, la page que vous recherchez n'existe pas.",
+        button: "Aller à l'accueil"
+    },
+    es: {
+        title: "Página no encontrada",
+        message: "Lo sentimos, la página que buscas no existe.",
+        button: "Ir a la página principal"
+    },
+    pt: {
+        title: "Página não encontrada",
+        message: "Desculpe, a página que você procura não existe.",
+        button: "Ir para a página inicial"
+    },
+    tr: {
+        title: "Sayfa Bulunamadı",
+        message: "Üzgünüz, aradığınız sayfa mevcut değil.",
+        button: "Anasayfaya Dön"
+    },
+    ru: {
+        title: "Страница не найдена",
+        message: "Извините, страница, которую вы ищете, не существует.",
+        button: "На главную"
+    },
+    zh: {
+        title: "页面未找到",
+        message: "抱歉，您要查找的页面不存在。",
+        button: "返回首页"
+    }
+};
+
+const lang = localStorage.getItem("language") || "en";
+const lang_404 = lang404[lang] || lang404.en;
+
+function save() {
+  document.getElementById("head").innerText = lang_404.title;
+  document.getElementById("desc").innerText = lang_404.message;
+  document.getElementById("btn_text").innerText = lang_404.button;
+}
+	
+	</script>
+<script type="text/javascript" src="js/timer.js"></script>
+</body>
+</html>

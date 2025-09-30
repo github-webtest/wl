@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Worl Lords</title>
+	<meta name="author" content="XMAF">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.99, maximum-scale=1.0, minimum-scale=1.0">
+	<link url="style" rel="stylesheet" href="css/map.css" type="text/css" media="screen">
+	<link url="style" rel="stylesheet" href="css/toast.css" type="text/css" media="screen">
+	<style>
+	#map{
+	  background-image: url('images/map_default.jpg');
+	}
+	
+	.m_img0 {
+	  background-image: url('images/map_0.jpg')
+	}
+	
+	.m_img1 {
+	  background-image: url('images/map_1.jpg')
+	}
+	
+	.m_img2 {
+	  background-image: url('images/map_2.jpg')
+	}
+	
+	.m_img3 {
+	  background-image: url('images/map_3.jpg')
+	}
+	
+	.m_img4 {
+	  background-image: url('images/map_4.jpg')
+	}
+	.m_img5 {
+	  background-image: url('images/map_5.jpg')
+	}
+	
+	.m_img6 {
+	  background-image: url('images/map_6.jpg')
+	}
+	
+	.m_img7 {
+	  background-image: url('images/map_7.jpg')
+	}
+	
+	.m_img8 {
+	  background-image: url('images/map_8.jpg')
+	}
+	
+	.m_img9 {
+	  background-image: url('images/map_9.jpg')
+	}
+	
+	.m_img10 {
+	  background-image: url('images/map_10.jpg')
+	}
+	</style>
+</head>
+
+<body>
+<button id="returnBtn">
+  <div class="arrow"></div>
+  <div class="distance">0KM</div>
+</button>
+
+<button id="map_icon" style="background-image: url('images/map_map.png');" onclick="window.location.href='regions.html';">
+</button>
+
+<button id="map_icon" style="top: 130px; background-image: url('images/map_search.png');" onclick="window.location.href='map_search.html';">
+</button>
+
+<button id="mini_map" onclick="window.location.href='minimap.html';">
+  <div id="mini_map_marker"></div>
+  <div id="mini_map_castle"></div>
+  <div id="mini_map_city" style="left: 10.5px; top: 10.5px;"></div>
+  <div id="mini_map_city" style="left: 10.5px; top: 23.1px;"></div>
+  <div id="mini_map_city" style="left: 10.5px; top: 52.5px;"></div>
+  <div id="mini_map_city" style="left: 10.5px; top: 81.9px;"></div>
+  <div id="mini_map_city" style="left: 10.5px; top: 94.5px;"></div>
+  <div id="mini_map_city" style="left: 23.1px; top: 10.5px;"></div>
+  <div id="mini_map_city" style="left: 23.1px; top: 23.1px;"></div>
+  <div id="mini_map_city" style="left: 23.1px; top: 39.9px;"></div>
+  <div id="mini_map_city" style="left: 23.1px; top: 65.1px;"></div>
+  <div id="mini_map_city" style="left: 23.1px; top: 81.9px;"></div>
+  <div id="mini_map_city" style="left: 23.1px; top: 94.5px;"></div>
+  <div id="mini_map_city" style="left: 31.5px; top: 52.5px; background: purple;"></div>
+  <div id="mini_map_city" style="left: 35.7px; top: 10.5px;"></div>
+  <div id="mini_map_city" style="left: 35.7px; top: 94.5px;"></div>
+  <div id="mini_map_city" style="left: 39.9px; top: 27.3px;"></div>
+  <div id="mini_map_city" style="left: 39.9px; top: 77.7px;"></div>
+  <div id="mini_map_city" style="left: 52.5px; top: 10.5px;"></div>
+  <div id="mini_map_city" style="left: 52.5px; top: 31.5px; background: purple;"></div>
+  <div id="mini_map_city" style="left: 52.5px; top: 52.5px; background: purple;"></div>
+  <div id="mini_map_city" style="left: 52.5px; top: 73.5px; background: purple;"></div>
+  <div id="mini_map_city" style="left: 52.5px; top: 94.5px;"></div>
+  <div id="mini_map_city" style="left: 65.1px; top: 27.3px;"></div>
+  <div id="mini_map_city" style="left: 65.1px; top: 77.7px;"></div>
+  <div id="mini_map_city" style="left: 69.3px; top: 10.5px;"></div>
+  <div id="mini_map_city" style="left: 69.3px; top: 94.5px;"></div>
+  <div id="mini_map_city" style="left: 73.5px; top: 52.5px; background: purple;"></div>
+  <div id="mini_map_city" style="left: 81.9px; top: 10.5px;"></div>
+  <div id="mini_map_city" style="left: 81.9px; top: 23.1px;"></div>
+  <div id="mini_map_city" style="left: 81.9px; top: 39.9px;"></div>
+  <div id="mini_map_city" style="left: 81.9px; top: 65.1px;"></div>
+  <div id="mini_map_city" style="left: 81.9px; top: 81.9px;"></div>
+  <div id="mini_map_city" style="left: 81.9px; top: 94.5px;"></div>
+  <div id="mini_map_city" style="left: 94.5px; top: 10.5px;"></div>
+  <div id="mini_map_city" style="left: 94.5px; top: 23.1px;"></div>
+  <div id="mini_map_city" style="left: 94.5px; top: 52.5px;"></div>
+  <div id="mini_map_city" style="left: 94.5px; top: 81.9px;"></div>
+  <div id="mini_map_city" style="left: 94.5px; top: 94.5px;"></div>
+</button>
+
+  <div id="viewport">
+  <div id="zoomWrapper" style="width: 100%; height: 100%; transform-origin: left top; position: relative; transform: scale(1.0);">
+    <div id="map"></div>
+	</div>
+  </div>
+
+<div id="toast-container"></div>
+<script type="text/javascript" src="js/toast.js"></script>
+<script type="text/javascript" src="json/map_img.js"></script>
+<script type="text/javascript" src="js/map.js"></script>
+<script type="text/javascript" src="js/timer.js"></script>
+</body>
+
+</html>

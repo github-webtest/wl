@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Worl Lords</title>
+	<meta name="author" content="XMAF">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<link url="style" rel="stylesheet" href="css/build_d.css" type="text/css" media="screen">
+	<link url="style" rel="stylesheet" href="css/toast.css" type="text/css" media="screen">
+	<script type="text/javascript" src="js/bonus.js"></script>
+	<script type="text/javascript" src="js/showinfo.js"></script>
+	<script type="text/javascript" src="json/json.js"></script>
+</head>
+
+<body onload="save()" style="user-select: none;">
+
+  <div class="header">
+    <div class="back-btn" onclick="window.history.back()" style="background-image: url('images/back_button.png');"></div>
+	<div id="title_lang" class="header-title">Bonus</div>
+	<div class="back-btn" onclick="window.location.href='kingdom.html';" style="background-image: url('images/home_icon.png');"></div>
+  </div>
+
+  <div id="container" class="container">
+  
+  <div id="bonus_check1" class="top_1" style="height: 32vh; display: none;">
+  <div style="width: 100%; text-align: center;"><span id="lang_bonus_t"></span></div>
+  <div class="bonus_treasure_div"><div class="bonus_treasure w_c_hover bonus_a1" onclick="Bonus('0')" style="background-image: url('images/bonus_box1.png'); float: right; margin-right: 0px;"></div><div class="bonus_treasure w_c_hover bonus_a2" onclick="Bonus('1')" style="background-image: url('images/bonus_box1.png');"></div><div class="bonus_treasure w_c_hover bonus_a1" onclick="Bonus('2')" style="background-image: url('images/bonus_box1.png'); float: left; margin-left: 0px;"></div></div>
+  <div class="bonus_treasure_div"><div class="bonus_treasure w_c_hover bonus_a2" onclick="Bonus('3')" style="background-image: url('images/bonus_box1.png'); float: right; margin-right: 0px;"></div><div class="bonus_treasure w_c_hover bonus_a1" onclick="Bonus('4')" style="background-image: url('images/bonus_box1.png');"></div><div class="bonus_treasure w_c_hover bonus_a2" onclick="Bonus('5')" style="background-image: url('images/bonus_box1.png'); float: left; margin-left: 0px;"></div></div>
+  <div class="bonus_treasure_div"><div class="bonus_treasure w_c_hover bonus_a1" onclick="Bonus('6')" style="background-image: url('images/bonus_box1.png'); float: right; margin-right: 0px;"></div><div class="bonus_treasure w_c_hover bonus_a2" onclick="Bonus('7')" style="background-image: url('images/bonus_box1.png');"></div><div class="bonus_treasure w_c_hover bonus_a1" onclick="Bonus('8')" style="background-image: url('images/bonus_box1.png'); float: left; margin-left: 0px;"></div></div>
+  </div>
+  
+  <div id="bonus_check2" class="top_1" style="height: 34vh; display: block;">
+  <div style="width: 100%; text-align: center;"><span id="lang_bonus_t2"></span></div>
+  <div class="bonus_treasure_div_t" style="margin-top: 2vh;"><div id="bonus1_in" class="bonus_in" style="float: rigt; margin-right: 0px;"><img id="bonus_1_img" class="bonus_in_img"></img><span id="bonus_1">0</span></div><div id="bonus2_in" class="bonus_in"><img id="bonus_2_img" class="bonus_in_img"></img><span id="bonus_2">0</span></div><div id="bonus3_in" class="bonus_in" style="float: left; margin-left: 0px;"><img id="bonus_3_img" class="bonus_in_img"></img><span id="bonus_3">0</span></div></div>
+  <div class="bonus_treasure_div_t"><div id="bonus4_in" class="bonus_in" style="float: rigt; margin-right: 0px;"><img id="bonus_4_img" class="bonus_in_img"></img><span id="bonus_4">0</span></div><div id="bonus5_in" class="bonus_in"><img id="bonus_5_img" class="bonus_in_img"></img><span id="bonus_5">0</span></div><div id="bonus6_in" class="bonus_in" style="float: left; margin-left: 0px;"><img id="bonus_6_img" class="bonus_in_img"></img><span id="bonus_6">0</span></div></div>
+  <div class="bonus_treasure_div_t"><div id="bonus7_in" class="bonus_in" style="float: rigt; margin-right: 0px;"><img id="bonus_7_img" class="bonus_in_img"></img><span id="bonus_7">0</span></div><div id="bonus8_in" class="bonus_in"><img id="bonus_8_img" class="bonus_in_img"></img><span id="bonus_8">0</span></div><div id="bonus9_in" class="bonus_in" style="float: left; margin-left: 0px;"><img id="bonus_9_img" class="bonus_in_img"></img><span id="bonus_9">0</span></div></div>
+  </div>
+  
+  </div>
+  
+
+<div id="toast-container"></div>
+<script type="text/javascript" src="js/toast.js"></script>
+<script type="text/javascript" src="js/timer.js"></script>
+
+</body>
+
+</html>

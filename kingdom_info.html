@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Worl Lords</title>
+	<meta name="author" content="XMAF">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<link url="style" rel="stylesheet" href="css/kingdom_info.css" type="text/css" media="screen">
+	<link url="style" rel="stylesheet" href="css/toast.css" type="text/css" media="screen">
+</head>
+
+<body onload="save()" style="user-select: none;">
+
+  <div class="header">
+    <div class="back-btn" onclick="window.history.back()" style="background-image: url('images/back_button.png');"></div>
+	<div id="title_lang" class="header-title">Kingdom Info</div>
+	<div class="back-btn" onclick="window.location.href='kingdom.html';" style="background-image: url('images/home_icon.png');"></div>
+  </div>
+
+  <div id="container" class="container">
+  
+  <div class="top_1">
+  <div class="top1_head"><b id="age_lang"></b></div>
+  <div class="top1_border"><div id="top1_border_img" class="top1_border_img" style="background-image: url('images/age_1.png');"></div><b id="age_text">Dark Age</b></div>
+  <div class="top1_head" style="text-align: left; margin-top: 0.5vh; margin-bottom: 0.5vh;"><b id="age_points_lang"></b><b id="age_points">0</b></div>
+  <div class="top1_head" style="height: 12px; background-image: url('images/line.png'); margin-bottom: 0.5vh;"></div>
+  <div id="next_age_div" class="top1_head" style="font-size: 12px; color: gray; margin-bottom: 0;"><b id="next_age_text">500 age points to next age</b></div>
+  </div>
+  
+  <div class="top_1" style="width: 48.5%; box-sizing: border-box; float: left; margin-right: 2.5%;">
+  <div class="top1_head" style="margin-bottom: 2vh;"><b id="economy_lang">Economy</b></div>
+  <div class="top1_head" style="font-size: 12px; text-align: left; margin-bottom: 0.75vh;"><div class="info_icon" style="background-image: url('images/food.png');"></div><b id="food_lang">Food: </b><b id="total_food_p">128</b><b id="foodh_lang"> food/hour</b></div>
+  <div class="top1_border" style="width: 96%; padding-left: 2%; padding-right: 2%; padding-top: 2px; padding-bottom: 2px; height: 33px; display: block; font-size: 12px; color: gray; margin-bottom: 0.75vh;"><div class="infos_div"><div class="info_icon" style="background-image: url('images/plus.png');"></div><b id="net_food_p">131</b><b id="food2_lang"> Food</b></div><div class="infos_div" style="margin: 0;"><div class="info_icon" style="background-image: url('images/minus.png');"></div><b id="net_food_m">3</b><b id="food3_lang"> Food</b></div></div>
+  <div class="top1_head" style="font-size: 12px; text-align: left; margin-bottom: 0.75vh;"><div class="info_icon" style="background-image: url('images/wood.png');"></div><b id="wood_lang">Wood: </b><b id="total_wood_p">20</b><b id="woodh_lang"> wood/hour</b></div>
+  <div class="top1_head" style="font-size: 12px; text-align: left; margin-bottom: 0.75vh;"><div class="info_icon" style="background-image: url('images/gold.png');"></div><b id="gold_lang">Gold: </b><b id="total_gold_p">10</b><b id="goldh_lang"> gold/hour</b></div>
+  <div class="top1_border" style="width: 96%; padding-left: 2%; padding-right: 2%; padding-top: 2px; padding-bottom: 2px; height: 67px; display: block; font-size: 12px; color: gray;"><div class="infos_div"><b id="kc_lang" style="color: black;">Kingdom Center: </b><b id="kc_gold">10</b></div><div class="infos_div"><b id="colonies_lang" style="color: black;">Colonies: </b><b id="c_gold">0</b></div><div class="infos_div"><b id="alliance_lang" style="color: black;">Alliance: </b><b id="a_gold">0</b></div><div class="infos_div" style="margin: 0;"><b id="cities_lang" style="color: black;">Cities: </b><b id="ct_gold">0</b></div></div>
+  </div>
+  
+  <div class="top_1" style="width: 48.5%; box-sizing: border-box; float: right;">
+  <div class="top1_head" style="margin-bottom: 2vh;"><b id="population_lang">Population</b></div>
+  <div class="top1_head" style="font-size: 12px; text-align: left; margin-bottom: 0.75vh;"><div class="info_icon" style="background-image: url('images/villagers.png');"></div><b id="villagers_lang">Villagers: </b><b id="total_food_villagers">3</b></div>
+  <div class="top1_border" style="width: 96%; padding-left: 2%; padding-right: 2%; padding-top: 2px; padding-bottom: 2px; height: 49px; display: block; font-size: 12px; color: gray; margin-bottom: 0.75vh;"><div class="infos_div"><b id="farmer_lang" style="color: black;"></b><b id="farmer"></b></div><div class="infos_div"><b id="woodcutter_lang" style="color: black;"></b><b id="woodcutter"></b></div><div class="infos_div" style="margin: 0;"><b id="gold_miner_lang" style="color: black;"></b><b id="gold_miner"></b></div></div>
+  <div class="top1_head" style="font-size: 12px; text-align: left; margin-bottom: 0.75vh;"><div class="info_icon" style="background-image: url('images/troops.png');"></div><b id="troops_lang">Troops: </b><b id="total_troops">0</b></div>
+  <div class="top1_border" style="width: 96%; padding-left: 2%; padding-right: 2%; padding-top: 2px; padding-bottom: 2px; height: 67px; display: block; font-size: 12px; color: gray; margin-bottom: 0.75vh;"><div class="infos_div"><b id="kc_lang2" style="color: black;">Kingdom Center: </b><b id="kc_t">0</b></div><div class="infos_div"><b id="colonies_lang2" style="color: black;">Colonies: </b><b id="c_t">0</b></div><div class="infos_div"><b id="cities_lang2" style="color: black;">Cities: </b><b id="ct_t">0</b></div><div class="infos_div" style="margin: 0;"><b id="support_t_lang" style="color: black;">Support Troops: </b><b id="sp_t">0</b></div></div>
+  <div class="top1_head" style="font-size: 12px; text-align: left; margin-bottom: 0.75vh;"><div class="info_icon" style="background-image: url('images/a_logs.png');"></div><b id="spies_lang">Spies: </b><b id="total_spies">0</b></div>
+  <div class="top1_border" style="width: 96%; padding-left: 2%; padding-right: 2%; padding-top: 2px; padding-bottom: 2px; height: 49px; display: block; font-size: 12px; color: gray;"><div class="infos_div"><b id="kc_lang3" style="color: black;">Kingdom Center: </b><b id="kc_s">0</b></div><div class="infos_div"><b id="colonies_lang3" style="color: black;">Colonies: </b><b id="c_s">0</b></div><div class="infos_div" style="margin: 0;"><b id="cities_lang3" style="color: black;">Cities: </b><b id="ct_s">0</b></div></div>
+  </div>
+  
+  <div class="top_1" style="width: 48.5%; box-sizing: border-box; float: left;">
+  <div class="top1_head" style="margin-bottom: 2vh;"><b id="storage_lang">Storage Limit</b></div>
+  <div class="top1_border" style="width: 96%; padding-left: 2%; padding-right: 2%; padding-top: 2px; padding-bottom: 2px; height: 49px; display: block; font-size: 12px; color: gray;"><div class="infos_div"><b id="food_lang2" style="color: black;"></b><b id="sl_food"></b></div><div class="infos_div"><b id="wood_lang2" style="color: black;"></b><b id="sl_wood"></b></div><div class="infos_div" style="margin: 0;"><b id="gold_lang2" style="color: black;"></b><b id="sl_gold"></b></div></div>
+  </div>
+  
+  </div>
+  
+
+<div id="toast-container"></div>
+<script type="text/javascript" src="js/toast.js"></script>
+<script type="text/javascript" src="js/timer.js"></script>
+<script type="text/javascript" src="js/kingdom_info.js"></script>
+</body>
+
+</html>

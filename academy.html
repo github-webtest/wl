@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Worl Lords</title>
+	<meta name="author" content="XMAF">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<link url="style" rel="stylesheet" href="css/build_d.css" type="text/css" media="screen">
+	<link url="style" rel="stylesheet" href="css/toast.css" type="text/css" media="screen">
+</head>
+<body onload="save()" style="user-select: none;">
+
+  <div class="header">
+    <div class="back-btn" onclick="window.history.back()" style="background-image: url('images/back_button.png');"></div>
+	<div id="title_lang" class="header-title"></div>
+	<div class="back-btn" onclick="window.location.href='kingdom.html';" style="background-image: url('images/home_icon.png');"></div>
+  </div>
+
+  <div id="container" class="container">
+  
+  <div class="top_1">
+  <div class="top_1_img" style="background-image: url('images/academy.png');"></div>
+  <div>
+  <div id="lang_build_title"></div>
+  </div>
+  </div>
+  
+  <div class="b_iner">
+  <div class="top_2_title"><b id="farming_lang" style="margin-right: 10px;"></b><b id="lang_level1"></b><b id="farming_level"></b><b>/20</b></div>
+  <div class="top_2">
+  <div class="top_2_img" style="background-image: url('images/farming.png');" onclick="showInfo('Farming');"><div class="warning_icon" style="background-image: url('images/warning_icon.png');"></div></div>
+  
+  <div id="farming_main1" class="top_2_main">
+  <div class="top_2_btn_main"><div class="build_i_div" style="visibility: hidden;"><input type="number" class="build_input"></input><span style="margin-left: 20%;">Max: </span><span id="farming_max">0</span></div><div class="build_i_div" style="visibility: hidden;"><div class="build_btn" style="background-image: url('images/button_lime.png'); margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/plus_icon.png');"></div></div></div><div class="build_i_div"><div class="build_btn" onclick="Upgrade('farming');" style="background-image: url('images/button_blue.png')"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><span id="lang_level2" style="margin-left: 10%;"></span><span id="farming_next_level"></span></div></div>
+  </div>
+  
+  <div id="farming_main2" class="top_2_main" style="display: none;">
+  <div class="top_2_btn_main"><div class="build_i_div_x1"><textarea id="farming_textarea" type="number" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Upgrade_Speed_Up('farming');" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span>50</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Upgrade_Cancel('farming');" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span id="lang_cancel1"></span></div></div>
+  </div>
+  
+  <div id="farming_main3" class="top_2_main" style="display: none;">
+  <div class="top_2_btn_main" style="display: none;"><div class="build_i_div_x1"><textarea type="number" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span>0</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span></span></div></div>
+  </div>
+  
+  </div>
+  </div>
+  
+  <div class="b_iner">
+  <div class="top_2_title"><b id="lumbering_lang" style="margin-right: 10px;"></b><b id="lang_level3"></b><b id="lumbering_level"></b><b>/20</b></div>
+  <div class="top_2">
+  <div class="top_2_img" style="background-image: url('images/lumbering.png');" onclick="showInfo('Lumbering');"><div class="warning_icon" style="background-image: url('images/warning_icon.png');"></div></div>
+  
+  <div id="lumbering_main1" class="top_2_main">
+  <div class="top_2_btn_main"><div class="build_i_div" style="visibility: hidden;"><input type="number" class="build_input"></input><span style="margin-left: 20%;">Max: </span><span id="lumbering_max">0</span></div><div class="build_i_div" style="visibility: hidden;"><div class="build_btn" style="background-image: url('images/button_lime.png'); margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/plus_icon.png');"></div></div></div><div class="build_i_div"><div class="build_btn" onclick="Upgrade('lumbering');" style="background-image: url('images/button_blue.png')"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><span id="lang_level4" style="margin-left: 10%;"></span><span id="lumbering_next_level"></span></div></div>
+  </div>
+  
+  <div id="lumbering_main2" class="top_2_main" style="display: none;">
+  <div class="top_2_btn_main"><div class="build_i_div_x1"><textarea id="lumbering_textarea" type="number" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Upgrade_Speed_Up('lumbering');" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span>50</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Upgrade_Cancel('lumbering');" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span id="lang_cancel2"></span></div></div>
+  </div>
+  
+  <div id="lumbering_main3" class="top_2_main" style="display: none;">
+  <div class="top_2_btn_main" style="display: none;"><div class="build_i_div_x1"><textarea type="number" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span>0</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span></span></div></div>
+  </div>
+  
+  </div>
+  </div>
+  
+  <div class="b_iner">
+  <div class="top_2_title"><b id="mining_lang" style="margin-right: 10px;"></b><b id="lang_level5"></b><b id="mining_level"></b><b>/20</b></div>
+  <div class="top_2">
+  <div class="top_2_img" style="background-image: url('images/mining.png');" onclick="showInfo('Mining');"><div class="warning_icon" style="background-image: url('images/warning_icon.png');"></div></div>
+  
+  <div id="mining_main1" class="top_2_main">
+  <div class="top_2_btn_main"><div class="build_i_div" style="visibility: hidden;"><input type="number" class="build_input"></input><span style="margin-left: 20%;">Max: </span><span id="mining_max">0</span></div><div class="build_i_div" style="visibility: hidden;"><div class="build_btn" style="background-image: url('images/button_lime.png'); margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/plus_icon.png');"></div></div></div><div class="build_i_div"><div class="build_btn" onclick="Upgrade('mining');" style="background-image: url('images/button_blue.png')"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><span id="lang_level6" style="margin-left: 10%;"></span><span id="mining_next_level"></span></div></div>
+  </div>
+  
+  <div id="mining_main2" class="top_2_main" style="display: none;">
+  <div class="top_2_btn_main"><div class="build_i_div_x1"><textarea id="mining_textarea" type="number" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Upgrade_Speed_Up('mining');" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span>50</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Upgrade_Cancel('mining');" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span id="lang_cancel3"></span></div></div>
+  </div>
+  
+  <div id="mining_main3" class="top_2_main" style="display: none;">
+  <div class="top_2_btn_main" style="display: none;"><div class="build_i_div_x1"><textarea type="number" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span>0</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span></span></div></div>
+  </div>
+  
+  </div>
+  </div>
+  
+  <div class="b_iner">
+  <div class="top_2_title"><b id="blacksmithing_lang" style="margin-right: 10px;"></b><b id="lang_level7"></b><b id="blacksmithing_level"></b><b>/20</b></div>
+  <div class="top_2">
+  <div id="blacksmithing_img" class="top_2_img" style="background-image: url('images/blacksmithing_gray.png');" onclick="showInfo('Blacksmithing');"><div id="blacksmithing_warning_icon" class="warning_icon" style="background-image: url('images/warning_gray_icon.png');"></div></div>
+  
+  <div id="blacksmithing_main1" class="top_2_main">
+  <div id="blacksmithing_top_2" class="top_2_btn_main" style="display: none;"><div class="build_i_div" style="visibility: hidden;"><input type="number" class="build_input"></input><span style="margin-left: 20%;">Max: </span><span id="blacksmithing_max">0</span></div><div class="build_i_div" style="visibility: hidden;"><div class="build_btn" style="background-image: url('images/button_lime.png'); margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/plus_icon.png');"></div></div></div><div class="build_i_div"><div class="build_btn" onclick="Upgrade('blacksmithing');" style="background-image: url('images/button_blue.png')"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><span id="lang_level8" style="margin-left: 10%;"></span><span id="blacksmithing_next_level"></span></div></div>
+  </div>
+  
+  <div id="blacksmithing_main2" class="top_2_main" style="display: none;">
+  <div class="top_2_btn_main"><div class="build_i_div_x1"><textarea id="blacksmithing_textarea" type="number" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Upgrade_Speed_Up('blacksmithing');" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span>50</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Upgrade_Cancel('blacksmithing');" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span id="lang_cancel4"></span></div></div>
+  </div>
+  
+  <div id="blacksmithing_main3" class="top_2_main" style="display: none">
+  <div class="top_2_btn_main" style="display: none;"><div class="build_i_div_x1"><textarea type="number" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span>0</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span></span></div></div>
+  </div>
+  
+  </div>
+  </div>
+  
+  <div class="b_iner">
+  <div class="top_2_title"><b id="riding_lang" style="margin-right: 10px;"></b><b id="lang_level9"></b><b id="riding_level"></b><b>/20</b></div>
+  <div class="top_2">
+  <div id="riding_img" class="top_2_img" style="background-image: url('images/riding_gray.png');" onclick="showInfo('Riding');"><div id="riding_warning_icon" class="warning_icon" style="background-image: url('images/warning_gray_icon.png');"></div></div>
+  
+  <div id="riding_main1" class="top_2_main">
+  <div id="riding_top_2" class="top_2_btn_main" style="display: none;"><div class="build_i_div" style="visibility: hidden;"><input type="number" class="build_input"></input><span style="margin-left: 20%;">Max: </span><span id="riding_max">0</span></div><div class="build_i_div" style="visibility: hidden;"><div class="build_btn" style="background-image: url('images/button_lime.png'); margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/plus_icon.png');"></div></div></div><div class="build_i_div"><div class="build_btn" onclick="Upgrade('riding');" style="background-image: url('images/button_blue.png')"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><span id="lang_level10" style="margin-left: 10%;"></span><span id="riding_next_level"></span></div></div>
+  </div>
+  
+  <div id="riding_main2" class="top_2_main" style="display: none;">
+  <div class="top_2_btn_main"><div class="build_i_div_x1"><textarea id="riding_textarea" type="number" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Upgrade_Speed_Up('riding');" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span>50</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Upgrade_Cancel('riding');" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span id="lang_cancel5"></span></div></div>
+  </div>
+  
+  <div id="riding_main3" class="top_2_main" style="display: none;">
+  <div class="top_2_btn_main" style="display: none;"><div class="build_i_div_x1"><textarea type="number" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span>0</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span></span></div></div>
+  </div>
+  
+  </div>
+  </div>
+  
+  <div class="b_iner">
+  <div class="top_2_title"><b id="geometry_lang" style="margin-right: 10px;"></b><b id="lang_level11"></b><b id="geometry_level"></b><b>/20</b></div>
+  <div class="top_2">
+  <div id="geometry_img" class="top_2_img" style="background-image: url('images/geometry_gray.png');" onclick="showInfo('Geometry');"><div id="geometry_warning_icon" class="warning_icon" style="background-image: url('images/warning_gray_icon.png');"></div></div>
+  
+  <div id="geometry_main1" class="top_2_main">
+  <div id="geometry_top_2" class="top_2_btn_main" style="display: none;"><div class="build_i_div" style="visibility: hidden;"><input type="number" class="build_input"></input><span style="margin-left: 20%;">Max: </span><span id="geometry_max">0</span></div><div class="build_i_div" style="visibility: hidden;"><div class="build_btn" style="background-image: url('images/button_lime.png'); margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/plus_icon.png');"></div></div></div><div class="build_i_div"><div class="build_btn" onclick="Upgrade('geometry');" style="background-image: url('images/button_blue.png')"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><span id="lang_level12" style="margin-left: 10%;"></span><span id="geometry_next_level"></span></div></div>
+  </div>
+  
+  <div id="geometry_main2" class="top_2_main" style="display: none;">
+  <div class="top_2_btn_main"><div class="build_i_div_x1"><textarea id="geometry_textarea" type="number" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Upgrade_Speed_Up('geometry');" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span>50</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Upgrade_Cancel('geometry');" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span id="lang_cancel6"></span></div></div>
+  </div>
+  
+  <div id="geometry_main3" class="top_2_main" style="display: none">
+  <div class="top_2_btn_main" style="display: none;"><div class="build_i_div_x1"><textarea type="number" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span>0</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span></span></div></div>
+  </div>
+  
+  </div>
+  </div>
+  
+  <div class="b_iner">
+  <div class="top_2_title"><b id="cartography_lang" style="margin-right: 10px;"></b><b id="lang_level13"></b><b id="cartography_level"></b><b>/20</b></div>
+  <div class="top_2">
+  <div id="cartography_img" class="top_2_img" style="background-image: url('images/cartography_gray.png');" onclick="showInfo('Cartography');"><div id="cartography_warning_icon" class="warning_icon" style="background-image: url('images/warning_gray_icon.png');"></div></div>
+  
+  <div id="cartography_main1" class="top_2_main">
+  <div id="cartography_top_2" class="top_2_btn_main" style="display: none;"><div class="build_i_div" style="visibility: hidden;"><input type="number" class="build_input"></input><span style="margin-left: 20%;">Max: </span><span id="cartography_max">0</span></div><div class="build_i_div" style="visibility: hidden;"><div class="build_btn" style="background-image: url('images/button_lime.png'); margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/plus_icon.png');"></div></div></div><div class="build_i_div"><div class="build_btn" onclick="Upgrade('cartography');" style="background-image: url('images/button_blue.png')"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><span id="lang_level14" style="margin-left: 10%;"></span><span id="cartography_next_level"></span></div></div>
+  </div>
+  
+  <div id="cartography_main2" class="top_2_main" style="display: none;">
+  <div class="top_2_btn_main"><div class="build_i_div_x1"><textarea id="cartography_textarea" type="number" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Upgrade_Speed_Up('cartography');" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span>50</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Upgrade_Cancel('cartography');" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span id="lang_cancel7"></span></div></div>
+  </div>
+  
+  <div id="cartography_main3" class="top_2_main" style="display: none">
+  <div class="top_2_btn_main" style="display: none;"><div class="build_i_div_x1"><textarea type="number" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span>0</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span></span></div></div>
+  </div>
+  
+  </div>
+  </div>
+  
+  <div class="b_iner">
+  <div class="top_2_title"><b id="spying_lang" style="margin-right: 10px;"></b><b id="lang_level15"></b><b id="spying_level"></b><b>/20</b></div>
+  <div class="top_2">
+  <div id="spying_img" class="top_2_img" style="background-image: url('images/spying_gray.png');" onclick="showInfo('Spying');"><div id="spying_warning_icon" class="warning_icon" style="background-image: url('images/warning_gray_icon.png');"></div></div>
+  
+  <div id="spying_main1" class="top_2_main">
+  <div id="spying_top_2" class="top_2_btn_main"  style="display: none;"><div class="build_i_div" style="visibility: hidden;"><input type="number" class="build_input"></input><span style="margin-left: 20%;">Max: </span><span id="spying_max">0</span></div><div class="build_i_div" style="visibility: hidden;"><div class="build_btn" style="background-image: url('images/button_lime.png'); margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/plus_icon.png');"></div></div></div><div class="build_i_div"><div class="build_btn" onclick="Upgrade('spying');" style="background-image: url('images/button_blue.png')"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><span id="lang_level16" style="margin-left: 10%;"></span><span id="spying_next_level"></span></div></div>
+  </div>
+  
+  <div id="spying_main2" class="top_2_main" style="display: none;">
+  <div class="top_2_btn_main"><div class="build_i_div_x1"><textarea id="spying_textarea" type="number" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Upgrade_Speed_Up('spying');" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span>50</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Upgrade_Cancel('spying');" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span id="lang_cancel8"></span></div></div>
+  </div>
+  
+  <div id="spying_main3" class="top_2_main" style="display: none;">
+  <div class="top_2_btn_main" style="display: none;"><div class="build_i_div_x1"><textarea type="number" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span>0</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span></span></div></div>
+  </div>
+  
+  </div>
+  </div>
+  
+  <div class="b_iner">
+  <div class="top_2_title"><b id="masonry_lang" style="margin-right: 10px;"></b><b id="lang_level17"></b><b id="masonry_level"></b><b>/20</b></div>
+  <div class="top_2">
+  <div id="masonry_img" class="top_2_img" style="background-image: url('images/masonry_gray.png');" onclick="showInfo('Masonry');"><div id="masonry_warning_icon" class="warning_icon" style="background-image: url('images/warning_gray_icon.png');"></div></div>
+  
+  <div id="masonry_main1" class="top_2_main">
+  <div id="masonry_top_2" class="top_2_btn_main" style="display: none;"><div class="build_i_div" style="visibility: hidden;"><input type="number" class="build_input"></input><span style="margin-left: 20%;">Max: </span><span id="masonry_max">0</span></div><div class="build_i_div" style="visibility: hidden;"><div class="build_btn" style="background-image: url('images/button_lime.png'); margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/plus_icon.png');"></div></div></div><div class="build_i_div"><div class="build_btn" onclick="Upgrade('masonry');" style="background-image: url('images/button_blue.png')"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><span id="lang_level18" style="margin-left: 10%;"></span><span id="masonry_next_level"></span></div></div>
+  </div>
+  
+  <div id="masonry_main2" class="top_2_main" style="display: none;">
+  <div class="top_2_btn_main"><div class="build_i_div_x1"><textarea id="masonry_textarea" type="number" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Upgrade_Speed_Up('masonry');" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span>50</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Upgrade_Cancel('masonry');" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span id="lang_cancel9"></span></div></div>
+  </div>
+  
+  <div id="masonry_main3" class="top_2_main" style="display: none;">
+  <div class="top_2_btn_main" style="display: none;"><div class="build_i_div_x1"><textarea type="number" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span>0</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span></span></div></div>
+  </div>
+  
+  </div>
+  </div>
+  
+  </div>
+  
+  <div id="build_info_bg" class="show_info_build_bg" style="display: none;">
+  <div class="show_info_build">
+  <div class="show_info_header"><div class="info_left"></div><b id="show_info_title">Castle</b><div class="info_right" style="background-image: url('images/x_icon.png');" onclick="showInfo('Exit')"></div></div>
+  
+  <div class="show_main1">
+  <div class="show_info_header2"><b id="lang_info">Info</b></div>
+  <div class="show_info_box">
+  <div class="show_info_box_in"><div class="s_info_box_l"><b id="lang_age">Age</b></div><div class="s_info_box"><span id="info_age">Dark (1)</span></div></div>
+  <div class="show_info_box_in"><div class="s_info_box_l"><b id="lang_type">Type</b></div><div class="s_info_box"><span id="info_type">Defense Building</span></div></div>
+  <div class="show_info_box_in"><div class="s_info_box_l"><b id="lang_class">Class</b></div><div class="s_info_box"><span id="info_class">Building</span></div></div>
+  </div>
+  </div>
+  
+  <div class="show_main1">
+  <div class="show_info_header2"><b id="lang_cost">Cost</b></div>
+  <div class="show_info_box">
+  <div id="cost_produce_t" class="show_info_box_in2"><div class="info_box_header"><b id="lang_produce">Produce</b></div></div>
+  <div id="cost_produce_box" class="s_info_box2"><div class="s_cost_box"><div class="s_cost_img" style="background-image: url('images/food.png');"></div><b id="cost_p_food">50</b></div><div class="s_cost_box"><div class="s_cost_img" style="background-image: url('images/wood.png');"></div><b id="cost_p_wood">0</b></div><div class="s_cost_box"><div class="s_cost_img" style="background-image: url('images/gold.png');"></div><b id="cost_p_gold">50</b></div><div class="s_cost_box"><div class="s_cost_img" style="background-image: url('images/diamond.png');"></div><b id="cost_p_diamond">0</b></div><div class="s_cost_box"><div class="s_cost_img" style="background-image: url('images/timer.png');"></div><b id="cost_p_time">00:00:30</b></div></div>
+  <div class="show_info_box_in2"><div class="info_box_header"><b id="lang_upgrade">Upgrade</b></div></div>
+  <div class="s_info_box2"><div class="s_cost_box2"><div class="s_cost_img" style="background-image: url('images/gold.png');"></div><b id="cost_u_gold">160</b></div><div class="s_cost_box2"><div class="s_cost_img" style="background-image: url('images/age_point.png');"></div><b id="cost_u_age">50</b></div><div class="s_cost_box2"><div class="s_cost_img" style="background-image: url('images/timer.png');"></div><b id="cost_u_time">00:00:20</b></div></div>
+  </div>
+  </div>
+  
+  <div class="show_main1 show_main2">
+  <div class="show_info_header2"><b id="lang_abilities">Abilities</b></div>
+  <div class="show_info_box">
+  <div class="show_info_a_title"><b id="show_info_a_title">Increases defense bonus</b></div>
+  <div id="show_info_box_in1" class="show_info_box_in"><div class="s_info_box_l"><b id="abilities_t1">Defense Bonus</b></div><div class="s_info_box"><span id="abilities_t1_s">0%</span></div></div>
+  <div id="show_info_box_in2" class="show_info_box_in"><div class="s_info_box_l"><b id="abilities_t2">Defense Bonus</b></div><div class="s_info_box"><span id="abilities_t2_s">0%</span></div></div>
+  <div id="show_info_box_in3" class="show_info_box_in"><div class="s_info_box_l"><b id="abilities_t3">Defense Bonus</b></div><div class="s_info_box"><span id="abilities_t3_s">0%</span></div></div>
+  </div>
+  </div>
+  
+  </div>
+  </div>
+  
+
+<div id="toast-container"></div>
+<script type="text/javascript" src="js/toast.js"></script>
+<script type="text/javascript" src="js/upgrade_production.js"></script>
+<script type="text/javascript" src="js/timer.js"></script>
+<script type="text/javascript" src="json/upgrade_data.js"></script>
+<script type="text/javascript" src="js/academy.js"></script>
+<script type="text/javascript" src="js/showinfo.js"></script>
+</body>
+
+</html>

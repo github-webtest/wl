@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Worl Lords</title>
+	<meta name="author" content="XMAF">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<link url="style" rel="stylesheet" href="css/build_d.css" type="text/css" media="screen">
+	<link url="style" rel="stylesheet" href="css/toast.css" type="text/css" media="screen">
+</head>
+
+<body onload="save()" style="user-select: none;">
+
+  <div class="header" style="display: block;">
+  
+  <div class="header_buttoner">
+    <div class="back-btn" onclick="window.history.back()" style="background-image: url('images/back_button.png');"></div>
+	<div id="title_lang" class="header-title">Embessy</div>
+	<div class="back-btn" onclick="window.location.href='kingdom.html';" style="background-image: url('images/home_icon.png');"></div>
+  </div>
+  
+  <div class="header_buttoner" style="margin-top: 10px; margin-bottom: 2px;">
+  <div id="header_selected1" class="header_selected" onclick="header_selected('1')" style="margin-right: 0px;"><b id="lang_header1_button"></b></div>
+  <div id="header_selected2" class="header_selected" onclick="header_selected('2')" style="background: linear-gradient(to bottom right, #5c7d99, #85c1f0);"><b id="lang_header2_button"></b></div>
+  </div>
+  
+  </div>
+
+  <div id="container1" class="container">
+  
+  
+  </div>
+  
+  
+  <div id="container2" class="container">
+  
+  
+  </div>
+  
+
+<div id="toast-container"></div>
+<script type="text/javascript" src="js/toast.js"></script>
+<script type="text/javascript" src="js/timer.js"></script>
+<script type="text/javascript" src="js/embessy.js"></script>
+	<script type="text/javascript" src="js/selected_header.js"></script>
+</body>
+
+</html>

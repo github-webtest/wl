@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Worl Lords</title>
+	<meta name="author" content="XMAF">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<link url="style" rel="stylesheet" href="css/build_d.css" type="text/css" media="screen">
+	<link url="style" rel="stylesheet" href="css/toast.css" type="text/css" media="screen">
+</head>
+
+<body onload="save()" style="user-select: none;">
+
+  <div class="header">
+    <div class="back-btn" onclick="window.history.back()" style="background-image: url('images/back_button.png');"></div>
+	<div class="header-title">Minimap</div>
+	<div class="back-btn" onclick="window.location.href='kingdom.html';" style="background-image: url('images/home_icon.png');"></div>
+  </div>
+
+<div id="container" class="container">
+  
+  <div id="mini_map">
+  <div id="mini_map_castle"></div>
+  <div id="c_1" class="mini_map_city" style="left: 29px; top: 29px;" onclick="window.location.href='map.html?x=50&y=50';"></div><span id="c_1_t" style="left: 21.1px; top: 36px;">Thrynd</span>
+  <div id="c_2" class="mini_map_city" style="left: 29px; top: 63.8px;" onclick="window.location.href='map.html?x=50&y=110';"></div><span id="c_2_t" style="left: 17.015px; top: 70.8px;">Dorynthia</span>
+  <div id="c_3"class="mini_map_city" style="left: 29px; top: 145px;" onclick="window.location.href='map.html?x=50&y=250';"></div><span id="c_3_t" style="left: 19.74px; top: 152px;">Myralith</span>
+  <div id="c_4" class="mini_map_city" style="left: 29px; top: 226.2px;" onclick="window.location.href='map.html?x=50&y=390';"></div><span id="c_4_t" style="left: 15.85px; top: 233.2px;">Drakemire</span>
+  <div id="c_5" class="mini_map_city" style="left: 29px; top: 261px;" onclick="window.location.href='map.html?x=50&y=450';"></div><span id="c_5_t" style="left: 20.71px; top: 268px;">Xandor</span>
+  <div id="c_6" class="mini_map_city" style="left: 63.8px; top: 29px;" onclick="window.location.href='map.html?x=110&y=50';"></div><span id="c_6_t" style="left: 56.88px; top: 36px;">Syldor</span>
+  <div id="c_7" class="mini_map_city" style="left: 63.8px; top: 63.8px;" onclick="window.location.href='map.html?x=110&y=110';"></div><span id="c_7_t" style="left: 51.62px; top: 70.8px;">Malverion</span>
+  <div id="c_8" class="mini_map_city" style="left: 63.8px; top: 110.2px;" onclick="window.location.href='map.html?x=110&y=190';"></div><span id="c_8_t" style="left: 53.955px; top: 117.2px;">Nyrathis</span>
+  <div id="c_9" class="mini_map_city" style="left: 63.8px; top: 179.8px;" onclick="window.location.href='map.html?x=110&y=310';"></div><span id="c_9_t" style="left: 50.45px; top: 186.8px;">Kelvashan</span>
+  <div id="c_10" class="mini_map_city" style="left: 63.8px; top: 226.2px;" onclick="window.location.href='map.html?x=110&y=390';"></div><span id="c_10_t" style="left: 56.29px; top: 233.2px;">Schwa</span>
+  <div id="c_11" class="mini_map_city" style="left: 63.8px; top: 261px;" onclick="window.location.href='map.html?x=110&y=450';"></div><span id="c_11_t" style="left: 54.925px; top: 268px;">Veythar</span>
+  <div id="c_12" class="mini_map_city" style="left: 87px; top: 145px; background: purple;" onclick="window.location.href='map.html?x=150&y=250';"></div><span id="c_12_t" style="left: 80.655px; top: 152px;">Hrynn</span>
+  <div id="c_13" class="mini_map_city" style="left: 98.6px; top: 29px;" onclick="window.location.href='map.html?x=170&y=50';"></div><span id="c_13_t" style="left: 88.365px; top: 36px;">Aquenor</span>
+  <div id="c_14" class="mini_map_city" style="left: 98.6px; top: 261px;" onclick="window.location.href='map.html?x=170&y=450';"></div><span id="c_14_t" style="left: 86.42px; top: 268px;">Quenloria</span>
+  <div id="c_15" class="mini_map_city" style="left: 110.2px; top: 75.4px;" onclick="window.location.href='map.html?x=190&y=130';"></div><span id="c_15_t" style="left: 96.27px; top: 82.4px;">Dorvashan</span>
+  <div id="c_16" class="mini_map_city" style="left: 110.2px; top: 214.6px;" onclick="window.location.href='map.html?x=190&y=370';"></div><span id="c_16_t" style="left: 99.965px; top: 221.6px;">Rainthar</span>
+  <div id="c_17" class="mini_map_city" style="left: 145px; top: 29px;" onclick="window.location.href='map.html?x=250&y=50';"></div><span id="c_17_t" style="left: 135.545px; top: 36px;">Durneth</span>
+  <div id="c_18" class="mini_map_city" style="left: 145px; top: 87px; background: purple;" onclick="window.location.href='map.html?x=250&y=150';"></div><span id="c_18_t" style="left: 134.57px; top: 94px;">Tyraketh</span>
+  <div id="c_19" class="mini_map_city" style="left: 145px; top: 145px; background: purple;" onclick="window.location.href='map.html?x=250&y=250';"></div><span id="c_19_t" style="left: 134.18px; top: 152px;">Eldrathia</span>
+  <div id="c_20" class="mini_map_city" style="left: 145px; top: 203px; background: purple;" onclick="window.location.href='map.html?x=250&y=350';"></div><span id="c_20_t" style="left: 131.655px; top: 210px;">Thundralis</span>
+  <div id="c_21" class="mini_map_city" style="left: 145px; top: 261px;" onclick="window.location.href='map.html?x=250&y=450';"></div><span id="c_21_t" style="left: 132.045px; top: 268px;">Sunmarsh</span>
+  <div id="c_22" class="mini_map_city" style="left: 179.8px; top: 75.4px;" onclick="window.location.href='map.html?x=310&y=130';"></div><span id="c_22_t" style="left: 169.76px; top: 82.4px;">Mistglen</span>
+  <div id="c_23" class="mini_map_city" style="left: 179.8px; top: 214.6px;" onclick="window.location.href='map.html?x=310&y=370';"></div><span id="c_23_t" style="left: 168.205px; top: 221.6px;">Zorynthal</span>
+  <div id="c_24" class="mini_map_city" style="left: 191.4px; top: 29px;" onclick="window.location.href='map.html?x=330&y=50';"></div><span id="c_24_t" style="left: 184.285px; top: 36px;">Olvryn</span>
+  <div id="c_25" class="mini_map_city" style="left: 191.4px; top: 261px;" onclick="window.location.href='map.html?x=330&y=450';"></div><span id="c_25_t" style="left: 178.055px; top: 268px;">Thryssalor</span>
+  <div id="c_26" class="mini_map_city" style="left: 203px; top: 145px; background: purple;" onclick="window.location.href='map.html?x=350&y=250';"></div><span id="c_26_t" style="left: 192.185px; top: 152px;">Arvoketh</span>
+  <div id="c_27" class="mini_map_city" style="left: 226.2px; top: 29px;" onclick="window.location.href='map.html?x=390&y=50';"></div><span id="c_27_t" style="left: 214.8px; top: 36px;">Drelmora</span>
+  <div id="c_28" class="mini_map_city" style="left: 226.2px; top: 63.8px;" onclick="window.location.href='map.html?x=390&y=110';"></div><span id="c_28_t" style="left: 212.075px; top: 70.8px;">Phyrrathen</span>
+  <div id="c_29" class="mini_map_city" style="left: 226.2px; top: 110.2px;" onclick="window.location.href='map.html?x=390&y=190';"></div><span id="c_29_t" style="left: 216.745px; top: 117.2px;">Solvaris</span>
+  <div id="c_30" class="mini_map_city" style="left: 226.2px; top: 179.8px;" onclick="window.location.href='map.html?x=390&y=310';"></div><span id="c_30_t" style="left: 214.215px; top: 186.8px;">Kranthoril</span>
+  <div id="c_31" class="mini_map_city" style="left: 226.2px; top: 226.2px;" onclick="window.location.href='map.html?x=390&y=390';"></div><span id="c_31_t" style="left: 215.52px; top: 233.2px;">Trosmire</span>
+  <div id="c_32" class="mini_map_city" style="left: 226.2px; top: 261px;" onclick="window.location.href='map.html?x=390&y=450';"></div><span id="c_32_t" style="left: 213.835px; top: 268px;">Altharwyn</span>
+  <div id="c_33" class="mini_map_city" style="left: 261px; top: 29px;" onclick="window.location.href='map.html?x=450&y=50';"></div><span id="c_33_t" style="left: 250.385px; top: 36px;">Fenrydal</span>
+  <div id="c_34" class="mini_map_city" style="left: 261px; top: 63.8px;" onclick="window.location.href='map.html?x=450&y=110';"></div><span id="c_34_t" style="left: 249.405px; top: 70.8px;">Miryathor</span>
+  <div id="c_35" class="mini_map_city" style="left: 261px; top: 145px;" onclick="window.location.href='map.html?x=450&y=250';"></div><span id="c_35_t" style="left: 250.58px; top: 152px;">Zevralith</span>
+  <div id="c_36" class="mini_map_city" style="left: 261px; top: 226.2px;" onclick="window.location.href='map.html?x=450&y=390';"></div><span id="c_36_t" style="left: 248.635px; top: 233.2px;">Ormaveth</span>
+  <div id="c_37" class="mini_map_city" style="left: 261px; top: 261px;" onclick="window.location.href='map.html?x=450&y=450';"></div><span id="c_37_t" style="left: 249.6px; top: 268px;">Cylthawa</span>
+</div>
+
+<div class="minimap_alt">
+<div class="minimap_alt_icons">
+<span id="lang_cities" style="margin-left: 2%;"></span><div class="mini_alt_city" style="margin-left: 2%;"></div>
+</div>
+<div class="minimap_alt_icons">
+<span id="lang_capitals" style="margin-left: 2%;"></span><div class="mini_alt_city" style="margin-left: 2%; background: purple;"></div>
+</div>
+<div class="minimap_alt_icons">
+<span id="lang_kingdomcenter" style="margin-left: 2%;"></span><div class="mini_alt_city" style="margin-left: 2%; background: red;"></div>
+</div>
+</div>
+  
+</div>
+
+
+<div id="toast-container"></div>
+<script type="text/javascript" src="js/toast.js"></script>
+<script type="text/javascript" src="js/minimap.js"></script>
+<script type="text/javascript" src="js/timer.js"></script>
+</body>
+
+</html>

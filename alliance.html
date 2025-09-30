@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Worl Lords</title>
+	<meta name="author" content="XMAF">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<link url="style" rel="stylesheet" href="css/build_d.css" type="text/css" media="screen">
+	<link url="style" rel="stylesheet" href="css/toast.css" type="text/css" media="screen">
+</head>
+
+<body onload="save()" style="user-select: none;">
+
+  <div class="header">
+    <div class="back-btn" onclick="window.history.back()" style="background-image: url('images/back_button.png');"></div>
+	<div id="title_lang" class="header-title">Alliance</div>
+	<div class="back-btn" onclick="window.location.href='kingdom.html';" style="background-image: url('images/home_icon.png');"></div>
+  </div>
+
+  <div id="container1" class="container">
+  
+  <div class="top_ll_div">
+  <div class="logs_div">
+  <span id="noa_lang" style="margin-left: auto; font-size: 14px; color: red;">You haven't joined an alliance yet</span>
+  </div>
+  <div class="aliance_alt">
+  <div id="create_lang" class="aliance_btn w_c_hover" style="background-image: url('images/button_blue.png'); margin-right: 5%;"><div id="al_img1" class="al_btn_img" style="background-image: url('images/a_c_alliance.png');"></div>Creative</div>
+  <div id="join_lang" class="aliance_btn w_c_hover" style="background-image: url('images/button_blue.png'); margin-left: 5%;"><div id="al_img2" class="al_btn_img" style="background-image: url('images/members.png');"></div>Join</div>
+  </div>
+  </div>
+  
+  <div id="al_invs_div" class="top_ll_div" style="display: none; margin-top: 4px;">
+  <div class="logs_div">
+  <span id="ifa_lang" style="margin-left: auto; font-size: 14px; color: black;">Invitations from Alliances</span>
+  </div>
+  <div id="al_inv_scroll" class="al_inv_scroll">
+  <div class="head_logs_div_text al_invites"><a class="a_href" href="">Alliance</a><div class="alliance_acp_rec a_al_hover" style="background-image: url('images/false.png');"></div><div class="alliance_acp_rec a_al_hover" style="background-image: url('images/true.png');"></div></div>
+  </div>
+  </div>
+  
+  </div>
+  
+  <div id="container2" class="container" style="display: none;">
+  
+  <div class="top_ll_div">
+  <div class="logs_div">
+  <span id="alliance_name" style="margin-left: auto; font-size: 14px;">Alliance Name</span>
+  </div>
+  <div class="aliance_alt" style="height: 10vh;">
+  <div id="al_bbtn1" class="aliance_btn w_c_hover" style="background-image: url('images/button_blue.png'); margin-right: 2%; width: 27%;"><div id="al_img3" class="al_btn_img" style="background-image: url('images/diplomacy.png');"></div>Diplomacy</div>
+  <div id="recruitments_lang" class="aliance_btn w_c_hover" style="background-image: url('images/button_blue.png'); margin-left: 2%; margin-right: 2%; width: 27%;"><div id="al_img4" class="al_btn_img" style="background-image: url('images/a_logs.png');"></div>Recruitments</div>
+  <div id="members_lang" class="aliance_btn w_c_hover" style="background-image: url('images/button_blue.png'); margin-left: 2%; width: 27%;"><div id="al_img5" class="al_btn_img" style="background-image: url('images/members.png');"></div>Members</div>
+  </div>
+  <div class="alliance_wall"><textarea class="alliance_wall_text"></textarea></div>
+  </div>
+  
+  </div>
+  
+
+<div id="toast-container"></div>
+<script type="text/javascript" src="js/toast.js"></script>
+<script type="text/javascript" src="js/timer.js"></script>
+<script type="text/javascript" src="js/alliance.js"></script>
+</body>
+
+</html>

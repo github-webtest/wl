@@ -1,0 +1,47 @@
+<html><head>
+	<title>Worl Lords</title>
+	<meta name="author" content="XMAF">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<link url="style" rel="stylesheet" href="css/build_d.css" type="text/css" media="screen">
+	<link url="style" rel="stylesheet" href="css/toast.css" type="text/css" media="screen">
+	<link url="style" rel="stylesheet" href="css/tasks.css" type="text/css" media="screen">
+</head>
+
+<body onload="save()" style="user-select: none;">
+
+  <div class="header">
+    <div class="back-btn" onclick="window.history.back()" style="background-image: url('images/back_button.png');"></div>
+	<div id="title_lang" class="header-title">Tasks</div>
+	<div class="back-btn" onclick="window.location.href='kingdom.html';" style="background-image: url('images/home_icon.png');"></div>
+  </div>
+
+  <div id="container" class="container" style="padding: 2%;">
+  
+  <div class="task_head">
+  <div class="tasks_item"><b id="tasks_lang">Tasks: </b><b id="tasks_number">1</b><b>/50</b></div>
+  <div class="tasks_item" style="width: 23%; text-align: right; margin-right: 1%;"><b id="reward_lang">Ödül: </b></div>
+  <div class="tasks_item" style="width: 45%; display: flex;"><div style="width: 33%; margin: auto;"><b id="tasks_xp" style="float: left;">+10</b><div class="tasks_img" style="background-image: url('images/age_point.png');"></div></div><div style="width: 33%; margin: auto;"><b id="tasks_diamond" style="float: left;">+10</b><div class="tasks_img" style="background-image: url('images/diamond.png');"></div></div><div style="width: 33%; margin: auto;"><b id="tasks_gold" style="float: left;">+300</b><div class="tasks_img" style="background-image: url('images/gold.png');"></div></div></div>
+  </div>
+  
+  <div class="tasks_line" style="background-image: url('images/line.png');"></div>
+  
+  <div class="tasks_head2"><b id="tasks_head_text">Çiftçi Üret</b></div>
+  
+  <div class="tasks_head3"><span id="tasks_text">Daha fazla besin üretmek için 1 çiftçi üret</span></div>
+  
+  <div class="tasks_head4"><div id="tasks_build_img" class="tasks_build_img" style="background-image: url('images/village.png');"></div></div>
+  
+  <div style="width: 100%; display: flex;"><div class="tasks_button" style="background-image: url('images/button_lime.png');"><span id="helpme_lang">Bana yardım et</span></div></div>
+  
+  </div>
+  
+
+<div id="toast-container"></div>
+<script type="text/javascript" src="js/toast.js"></script>
+<script type="text/javascript" src="js/timer.js"></script>
+<script type="text/javascript" src="js/tasks.js"></script>
+<script type="text/javascript" src="js/showinfo.js"></script>
+<script type="text/javascript" src="json/json.js"></script>
+</body>
+</html>

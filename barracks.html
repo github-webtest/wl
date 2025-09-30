@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Worl Lords</title>
+	<meta name="author" content="XMAF">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<link url="style" rel="stylesheet" href="css/build_d.css" type="text/css" media="screen">
+	<link url="style" rel="stylesheet" href="css/toast.css" type="text/css" media="screen">
+</head>
+
+<body onload="save()" style="user-select: none;">
+
+  <div class="header">
+    <div class="back-btn" onclick="window.history.back()" style="background-image: url('images/back_button.png');"></div>
+	<div id="title_lang" class="header-title"></div>
+	<div class="back-btn" onclick="window.location.href='kingdom.html';" style="background-image: url('images/home_icon.png');"></div>
+  </div>
+
+  <div id="container" class="container">
+  
+  <div class="top_1">
+  <div class="top_1_img" style="background-image: url('images/barracks.png');"></div>
+  <div>
+  <div id="lang_build_title"></div>
+  </div>
+  </div>
+  
+  <div class="b_iner">
+  <div class="top_2_title"><b style="margin-right: 10px;">Spearman</b><b>x</b><b id="spearman_amount" style="margin-right: 10px;"></b><b id="lang_level1"></b><b id="spearman_level"></b><b>/20</b></div>
+  <div class="top_2">
+  <div class="top_2_img" style="background-image: url('images/spearman.png');" onclick="showInfo('Spearman');"><div class="warning_icon" style="background-image: url('images/warning_icon.png');"></div></div>
+  
+  <div id="spearman_main1" class="top_2_main">
+  <div class="top_2_btn_main"><div class="build_i_div"><input id="spearman_input" type="number" class="build_input"></input><span style="margin-left: 20%;">Max: </span><span id="spearman_max"></span></div><div class="build_i_div"><div class="build_btn" onclick="Produce('spearman')" style="background-image: url('images/button_lime.png'); margin-left: 0px; margin-right: 10%;"><div class="build_button_in_img" style="background-image: url('images/plus_icon.png');"></div></div></div><div class="build_i_div"><div class="build_btn" onclick="Upgrade('spearman')" style="background-image: url('images/button_blue.png')"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><span id="lang_level2" style="margin-left: 10%;"></span><span id="spearman_next_level"></span></div></div>
+  </div>
+  
+  <div id="spearman_main2" class="top_2_main" style="display: none">
+  <div id="spearman_u_buttons" style="display: none;" class="top_2_btn_main"><div class="build_i_div_x1"><textarea id="spearman_u_textarea" type="text" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Upgrade_Speed_Up('spearman')" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span>50</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Upgrade_Cancel('spearman')" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span id="lang_cancel1"></span></div></div>
+  <div id="spearman_p_buttons" style="display: none;" class="top_2_btn_main"><div class="build_i_div_x1"><textarea id="spearman_p_textarea" type="text" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Produce_Speed_Up('spearman')" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span id="spearman_pg_diamond">0</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Produce_Cancel('spearman')" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span id="lang_cancel8"></span></div></div>
+  </div>
+  
+  <div id="spearman_main3" class="top_2_main" style="display: none">
+  <div class="top_2_btn_main" style="display: none;"><div class="build_i_div_x1"><textarea type="number" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span>0</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span></span></div></div>
+  </div>
+  
+  </div>
+  </div>
+  
+  <div class="b_iner">
+  <div class="top_2_title"><b style="margin-right: 10px;">Archer</b><b>x</b><b id="archer_amount" style="margin-right: 10px;"></b><b id="lang_level3"></b><b id="archer_level"></b><b>/20</b></div>
+  <div class="top_2">
+  <div class="top_2_img" style="background-image: url('images/archer.png');" onclick="showInfo('Archer');"><div class="warning_icon" style="background-image: url('images/warning_icon.png');"></div></div>
+  
+  <div id="archer_main1" class="top_2_main">
+  <div class="top_2_btn_main"><div class="build_i_div"><input id="archer_input" type="number" class="build_input"></input><span style="margin-left: 20%;">Max: </span><span id="archer_max"></span></div><div class="build_i_div"><div class="build_btn" onclick="Produce('archer')" style="background-image: url('images/button_lime.png'); margin-left: 0px; margin-right: 10%;"><div class="build_button_in_img" style="background-image: url('images/plus_icon.png');"></div></div></div><div class="build_i_div"><div class="build_btn" onclick="Upgrade('archer')" style="background-image: url('images/button_blue.png')"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><span id="lang_level4" style="margin-left: 10%;"></span><span id="archer_next_level"></span></div></div>
+  </div>
+  
+  <div id="archer_main2" class="top_2_main" style="display: none">
+  <div id="archer_u_buttons" style="display: none;" class="top_2_btn_main"><div class="build_i_div_x1"><textarea id="archer_u_textarea" type="text" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Upgrade_Speed_Up('archer')" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span>50</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Upgrade_Cancel('archer')" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span id="lang_cancel2"></span></div></div>
+  <div id="archer_p_buttons" style="display: none;" class="top_2_btn_main"><div class="build_i_div_x1"><textarea id="archer_p_textarea" type="text" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Produce_Speed_Up('archer')" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span id="archer_pg_diamond">0</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Produce_Cancel('archer')" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span id="lang_cancel9"></span></div></div>
+  </div>
+  
+  <div id="archer_main3" class="top_2_main" style="display: none">
+  <div class="top_2_btn_main" style="display: none;"><div class="build_i_div_x1"><textarea type="number" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span>0</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span></span></div></div>
+  </div>
+  
+  </div>
+  </div>
+  
+  <div class="b_iner">
+  <div class="top_2_title"><b id="lang_spy" style="margin-right: 10px;">Spy</b><b>x</b><b id="spy_amount" style="margin-right: 10px;"></b><b id="lang_level5"></b><b id="spy_level"></b><b>/20</b></div>
+  <div class="top_2">
+  <div class="top_2_img" style="background-image: url('images/spy.png');" onclick="showInfo('Spy');"><div class="warning_icon" style="background-image: url('images/warning_icon.png');"></div></div>
+  
+  <div id="spy_main1" class="top_2_main">
+  <div class="top_2_btn_main"><div class="build_i_div"><input id="spy_input" type="number" class="build_input"></input><span style="margin-left: 20%;">Max: </span><span id="spy_max"></span></div><div class="build_i_div"><div class="build_btn" onclick="Produce('spy')" style="background-image: url('images/button_lime.png'); margin-left: 0px; margin-right: 10%;"><div class="build_button_in_img" style="background-image: url('images/plus_icon.png');"></div></div></div><div class="build_i_div"><div class="build_btn" onclick="Upgrade('spy')" style="background-image: url('images/button_blue.png')"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><span id="lang_level6" style="margin-left: 10%;"></span><span id="spy_next_level"></span></div></div>
+  </div>
+  
+  <div id="spy_main2" class="top_2_main" style="display: none">
+  <div id="spy_u_buttons" style="display: none;" class="top_2_btn_main"><div class="build_i_div_x1"><textarea id="spy_u_textarea" type="text" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Upgrade_Speed_Up('spy')" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span>50</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Upgrade_Cancel('spy')" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span id="lang_cancel3"></span></div></div>
+  <div id="spy_p_buttons" style="display: none;" class="top_2_btn_main"><div class="build_i_div_x1"><textarea id="spy_p_textarea" type="text" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Produce_Speed_Up('spy')" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span id="spy_pg_diamond">0</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Produce_Cancel('spy')" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span id="lang_cancel10"></span></div></div>
+  </div>
+  
+  <div id="spy_main3" class="top_2_main" style="display: none">
+  <div class="top_2_btn_main" style="display: none;"><div class="build_i_div_x1"><textarea type="number" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span>0</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span></span></div></div>
+  </div>
+  
+  </div>
+  </div>
+  
+  <div class="b_iner">
+  <div class="top_2_title"><b style="margin-right: 10px;">Cataphract</b><b>x</b><b id="cataphract_amount" style="margin-right: 10px;"></b><b id="lang_level7"></b><b id="cataphract_level"></b><b>/20</b></div>
+  <div class="top_2">
+  <div id="cataphract_img" class="top_2_img" style="background-image: url('images/cataphract_gray.png');" onclick="showInfo('Cataphract');"><div id="cataphract_warning_icon" class="warning_icon" style="background-image: url('images/warning_gray_icon.png');"></div></div>
+  
+  <div id="cataphract_main1" class="top_2_main">
+  <div id="cataphract_top_2" class="top_2_btn_main" style="display: none;"><div class="build_i_div"><input id="cataphract_input" type="number" class="build_input"></input><span style="margin-left: 20%;">Max: </span><span id="cataphract_max"></span></div><div class="build_i_div"><div class="build_btn" onclick="Produce('cataphract')" style="background-image: url('images/button_lime.png'); margin-left: 0px; margin-right: 10%;"><div class="build_button_in_img" style="background-image: url('images/plus_icon.png');"></div></div></div><div class="build_i_div"><div class="build_btn" onclick="Upgrade('cataphract')" style="background-image: url('images/button_blue.png')"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><span id="lang_level8" style="margin-left: 10%;"></span><span id="cataphract_next_level"></span></div></div>
+  </div>
+  
+  <div id="cataphract_main2" class="top_2_main" style="display: none">
+  <div id="cataphract_u_buttons" style="display: none;" class="top_2_btn_main"><div class="build_i_div_x1"><textarea id="cataphract_u_textarea" type="text" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Upgrade_Speed_Up('cataphract')" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span>50</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Upgrade_Cancel('cataphract')" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span id="lang_cancel4"></span></div></div>
+  <div id="cataphract_p_buttons" style="display: none;" class="top_2_btn_main"><div class="build_i_div_x1"><textarea id="cataphract_p_textarea" type="text" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Produce_Speed_Up('cataphract')" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span id="cataphract_pg_diamond">0</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Produce_Cancel('cataphract')" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span id="lang_cancel11"></span></div></div>
+  </div>
+  
+  <div id="cataphract_main3" class="top_2_main" style="display: none">
+  <div class="top_2_btn_main" style="display: none;"><div class="build_i_div_x1"><textarea type="number" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span>0</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span></span></div></div>
+  </div>
+  
+  </div>
+  </div>
+  
+  <div class="b_iner">
+  <div class="top_2_title"><b style="margin-right: 10px;">Swordsman</b><b>x</b><b id="swordsman_amount" style="margin-right: 10px;"></b><b id="lang_level9"></b><b id="swordsman_level"></b><b>/20</b></div>
+  <div class="top_2">
+  <div id="swordsman_img" class="top_2_img" style="background-image: url('images/swordsman_gray.png');" onclick="showInfo('Swordsman');"><div id="swordsman_warning_icon" class="warning_icon" style="background-image: url('images/warning_gray_icon.png');"></div></div>
+  
+  <div id="swordsman_main1" class="top_2_main">
+  <div id="swordsman_top_2" class="top_2_btn_main" style="display: none;"><div class="build_i_div"><input id="swordsman_input" type="number" class="build_input"></input><span style="margin-left: 20%;">Max: </span><span id="swordsman_max"></span></div><div class="build_i_div"><div class="build_btn" onclick="Produce('swordsman')" style="background-image: url('images/button_lime.png'); margin-left: 0px; margin-right: 10%;"><div class="build_button_in_img" style="background-image: url('images/plus_icon.png');"></div></div></div><div class="build_i_div"><div class="build_btn" onclick="Upgrade('swordsman')" style="background-image: url('images/button_blue.png')"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><span id="lang_level10" style="margin-left: 10%;"></span><span id="swordsman_next_level"></span></div></div>
+  </div>
+  
+  <div id="swordsman_main2" class="top_2_main" style="display: none">
+  <div id="swordsman_u_buttons" style="display: none;" class="top_2_btn_main"><div class="build_i_div_x1"><textarea id="swordsman_u_textarea" type="text" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Upgrade_Speed_Up('swordsman')" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span>50</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Upgrade_Cancel('swordsman')" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span id="lang_cancel5"></span></div></div>
+  <div id="swordsman_p_buttons" style="display: none;" class="top_2_btn_main"><div class="build_i_div_x1"><textarea id="swordsman_p_textarea" type="text" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Produce_Speed_Up('swordsman')" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span id="swordsman_pg_diamond">0</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Produce_Cancel('swordsman')" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span id="lang_cancel12"></span></div></div>
+  </div>
+  
+  <div id="swordsman_main3" class="top_2_main" style="display: none">
+  <div class="top_2_btn_main" style="display: none;"><div class="build_i_div_x1"><textarea type="number" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span>0</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span></span></div></div>
+  </div>
+  
+  </div>
+  </div>
+  
+  <div class="b_iner">
+  <div class="top_2_title"><b style="margin-right: 10px;">Crossbowman</b><b>x</b><b id="crossbowman_amount" style="margin-right: 10px;"></b><b id="lang_level11"></b><b id="crossbowman_level"></b><b>/20</b></div>
+  <div class="top_2">
+  <div id="crossbowman_img" class="top_2_img" style="background-image: url('images/crossbowman_gray.png');" onclick="showInfo('Crossbowman');"><div id="crossbowman_warning_icon" class="warning_icon" style="background-image: url('images/warning_gray_icon.png');"></div></div>
+  
+  <div id="crossbowman_main1" class="top_2_main">
+  <div id="crossbowman_top_2" class="top_2_btn_main" style="display: none;"><div class="build_i_div"><input id="crossbowman_input" type="number" class="build_input"></input><span style="margin-left: 20%;">Max: </span><span id="crossbowman_max"></span></div><div class="build_i_div"><div class="build_btn" onclick="Produce('crossbowman')" style="background-image: url('images/button_lime.png'); margin-left: 0px; margin-right: 10%;"><div class="build_button_in_img" style="background-image: url('images/plus_icon.png');"></div></div></div><div class="build_i_div"><div class="build_btn" onclick="Upgrade('crossbowman')" style="background-image: url('images/button_blue.png')"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><span id="lang_level12" style="margin-left: 10%;"></span><span id="crossbowman_next_level"></span></div></div>
+  </div>
+  
+  <div id="crossbowman_main2" class="top_2_main" style="display: none">
+  <div id="crossbowman_u_buttons" style="display: none;" class="top_2_btn_main"><div class="build_i_div_x1"><textarea id="crossbowman_u_textarea" type="text" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Upgrade_Speed_Up('crossbowman')" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span>50</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Upgrade_Cancel('crossbowman')" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span id="lang_cancel6"></span></div></div>
+  <div id="crossbowman_p_buttons" style="display: none;" class="top_2_btn_main"><div class="build_i_div_x1"><textarea id="crossbowman_p_textarea" type="text" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Produce_Speed_Up('crossbowman')" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span id="crossbowman_pg_diamond">0</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Produce_Cancel('crossbowman')" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span id="lang_cancel13"></span></div></div>
+  </div>
+  
+  <div id="crossbowman_main3" class="top_2_main" style="display: none">
+  <div class="top_2_btn_main" style="display: none;"><div class="build_i_div_x1"><textarea type="number" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span>0</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span></span></div></div>
+  </div>
+  
+  </div>
+  </div>
+  
+  <div class="b_iner">
+  <div class="top_2_title"><b style="margin-right: 10px;">Arquebusiers</b><b>x</b><b id="arquebusiers_amount" style="margin-right: 10px;"></b><b id="lang_level13"></b><b id="arquebusiers_level"></b><b>/20</b></div>
+  <div class="top_2">
+  <div id="arquebusiers_img" class="top_2_img" style="background-image: url('images/arquebusiers_gray.png');" onclick="showInfo('Arquebusiers');"><div id="arquebusiers_warning_icon" class="warning_icon" style="background-image: url('images/warning_gray_icon.png');"></div></div>
+  
+  <div id="arquebusiers_main1" class="top_2_main">
+  <div id="arquebusiers_top_2" class="top_2_btn_main" style="display: none;"><div class="build_i_div"><input id="arquebusiers_input" type="number" class="build_input"></input><span style="margin-left: 20%;">Max: </span><span id="arquebusiers_max"></span></div><div class="build_i_div"><div class="build_btn" onclick="Produce('arquebusiers')" style="background-image: url('images/button_lime.png'); margin-left: 0px; margin-right: 10%;"><div class="build_button_in_img" style="background-image: url('images/plus_icon.png');"></div></div></div><div class="build_i_div"><div class="build_btn" onclick="Upgrade('arquebusiers')" style="background-image: url('images/button_blue.png')"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><span id="lang_level14" style="margin-left: 10%;"></span><span id="arquebusiers_next_level"></span></div></div>
+  </div>
+  
+  <div id="arquebusiers_main2" class="top_2_main" style="display: none">
+  <div id="arquebusiers_u_buttons" style="display: none;" class="top_2_btn_main"><div class="build_i_div_x1"><textarea id="arquebusiers_u_textarea" type="text" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Upgrade_Speed_Up('arquebusiers')" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span>50</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Upgrade_Cancel('arquebusiers')" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span id="lang_cancel7"></span></div></div>
+  <div id="arquebusiers_p_buttons" style="display: none;" class="top_2_btn_main"><div class="build_i_div_x1"><textarea id="arquebusiers_p_textarea" type="text" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Produce_Speed_Up('arquebusiers')" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span id="arquebusiers_pg_diamond">0</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" onclick="Produce_Cancel('arquebusiers')" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span id="lang_cancel14"></span></div></div>
+  </div>
+  
+  <div id="arquebusiers_main3" class="top_2_main" style="display: none">
+  <div class="top_2_btn_main" style="display: none;"><div class="build_i_div_x1"><textarea type="number" class="build_textarea" disabled></textarea></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" style="background-image: url('images/button_blue.png'); margin-left: 0px; max-width: 100%"><div class="build_button_in_img" style="background-image: url('images/upgrade_icon.png');"></div></div><img style="width: 12px; height: 12px;" src="images/diamond.png"></img><span>0</span></div><div class="build_i_div_x2" style="text-align: center;"><div class="build_btn" style="background-image: url('images/button_red.png'); max-width: 100%; margin-left: 0px;"><div class="build_button_in_img" style="background-image: url('images/x_icon.png');"></div></div><span></span></div></div>
+  </div>
+  
+  </div>
+  </div>
+  
+  </div>
+  
+  <div id="build_info_bg" class="show_info_build_bg" style="display: none;">
+  <div class="show_info_build">
+  <div class="show_info_header"><div class="info_left"></div><b id="show_info_title">Castle</b><div class="info_right" style="background-image: url('images/x_icon.png');" onclick="showInfo('Exit')"></div></div>
+  
+  <div class="show_main1">
+  <div class="show_info_header2"><b id="lang_info">Info</b></div>
+  <div class="show_info_box">
+  <div class="show_info_box_in"><div class="s_info_box_l"><b id="lang_age">Age</b></div><div class="s_info_box"><span id="info_age">Dark (1)</span></div></div>
+  <div class="show_info_box_in"><div class="s_info_box_l"><b id="lang_type">Type</b></div><div class="s_info_box"><span id="info_type">Defense Building</span></div></div>
+  <div class="show_info_box_in"><div class="s_info_box_l"><b id="lang_class">Class</b></div><div class="s_info_box"><span id="info_class">Building</span></div></div>
+  </div>
+  </div>
+  
+  <div class="show_main1">
+  <div class="show_info_header2"><b id="lang_cost">Cost</b></div>
+  <div class="show_info_box">
+  <div id="cost_produce_t" class="show_info_box_in2"><div class="info_box_header"><b id="lang_produce">Produce</b></div></div>
+  <div id="cost_produce_box" class="s_info_box2"><div class="s_cost_box"><div class="s_cost_img" style="background-image: url('images/food.png');"></div><b id="cost_p_food">50</b></div><div class="s_cost_box"><div class="s_cost_img" style="background-image: url('images/wood.png');"></div><b id="cost_p_wood">0</b></div><div class="s_cost_box"><div class="s_cost_img" style="background-image: url('images/gold.png');"></div><b id="cost_p_gold">50</b></div><div class="s_cost_box"><div class="s_cost_img" style="background-image: url('images/diamond.png');"></div><b id="cost_p_diamond">0</b></div><div class="s_cost_box"><div class="s_cost_img" style="background-image: url('images/timer.png');"></div><b id="cost_p_time">00:00:30</b></div></div>
+  <div class="show_info_box_in2"><div class="info_box_header"><b id="lang_upgrade">Upgrade</b></div></div>
+  <div class="s_info_box2"><div class="s_cost_box2"><div class="s_cost_img" style="background-image: url('images/gold.png');"></div><b id="cost_u_gold">160</b></div><div class="s_cost_box2"><div class="s_cost_img" style="background-image: url('images/age_point.png');"></div><b id="cost_u_age">50</b></div><div class="s_cost_box2"><div class="s_cost_img" style="background-image: url('images/timer.png');"></div><b id="cost_u_time">00:00:20</b></div></div>
+  </div>
+  </div>
+  
+  <div class="show_main1 show_main2">
+  <div class="show_info_header2"><b id="lang_abilities">Abilities</b></div>
+  <div class="show_info_box">
+  <div class="show_info_a_title"><b id="show_info_a_title">Increases defense bonus</b></div>
+  <div id="show_info_box_in1" class="show_info_box_in"><div class="s_info_box_l"><b id="abilities_t1">Defense Bonus</b></div><div class="s_info_box"><span id="abilities_t1_s">0%</span></div></div>
+  <div id="show_info_box_in2" class="show_info_box_in"><div class="s_info_box_l"><b id="abilities_t2">Defense Bonus</b></div><div class="s_info_box"><span id="abilities_t2_s">0%</span></div></div>
+  <div id="show_info_box_in3" class="show_info_box_in"><div class="s_info_box_l"><b id="abilities_t3">Defense Bonus</b></div><div class="s_info_box"><span id="abilities_t3_s">0%</span></div></div>
+  </div>
+  </div>
+  
+  </div>
+  </div>
+  
+
+<div id="toast-container"></div>
+<script type="text/javascript" src="js/toast.js"></script>
+<script type="text/javascript" src="js/timer.js"></script>
+<script type="text/javascript" src="js/upgrade_production.js"></script>
+<script type="text/javascript" src="json/upgrade_data.js"></script>
+<script type="text/javascript" src="js/barracks.js"></script>
+<script type="text/javascript" src="js/showinfo.js"></script>
+</body>
+
+</html>
