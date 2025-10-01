@@ -13,7 +13,7 @@ const { promisify } = require("util");
 const { open } = require('sqlite');
 
 const app = express();
-const PORT = 3000;
+const PORT = 5000;
 
 const JWT_SECRET = process.env.JWT_SECRET;
 
@@ -4377,3 +4377,4 @@ setInterval(updateWorldsResources, 60000);
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
 });
+
